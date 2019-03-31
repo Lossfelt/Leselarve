@@ -187,5 +187,23 @@
     "pages": 245,
     "numberInLine": 21,
     "picture": "https://images.gr-assets.com/books/1327128714l/28921.jpg"
+  },
+  {
+    "title": "All Quiet on the Western Front",
+    "author": "Erich Maria Remarque",
+    "published": 1929,
+    "chosenBy": "Levin",
+    "pages": 224,
+    "numberInLine": 22,
+    "picture": "https://dj4fsg3e1je59.cloudfront.net/9780099532811/img/0"
+  },
+  {
+    "title": "Tung Tids Tale",
+    "author": "Olaug Nilssen",
+    "published": 2017,
+    "chosenBy": "Ida",
+    "pages": 155,
+    "numberInLine": 23,
+    "picture": "https://www.tanum.no/sek-asset/products/9788252190274.jpg?w=436"
   }
 ]
