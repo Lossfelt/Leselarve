@@ -7,7 +7,7 @@ class Book extends React.Component {
       <div>
         <table>
           <tr>
-            <td rowSpan="5">
+            <td rowSpan="6">
               <img
                 src={book.picture}
                 alt="bokens forside"
@@ -15,6 +15,7 @@ class Book extends React.Component {
                 width="100"
               />
             </td>
+            <td width="12" />
             <tr>
               <td>
                 <b>{book.title}</b>
