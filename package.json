@@ -1,8 +1,7 @@
 {
   "name": "leselarve",
   "version": "1.0.0",
-  "description":
-    "Working on a site for my book club to show what books we've read.",
+  "description": "Working on a site for my book club to show what books we've read.",
   "keywords": [],
   "main": "src/index.js",
   "dependencies": {
