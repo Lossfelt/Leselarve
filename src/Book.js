@@ -17,7 +17,7 @@ class Book extends React.Component {
             </td>
             <td width="12" />
             <tr>
-              <td colspan="2">
+              <td colSpan="2">
                 <b>{book.title}</b>
               </td>
             </tr>
@@ -28,27 +28,33 @@ class Book extends React.Component {
             </tr>
             <tr>
               <td width="30">
-                <i class="fas fa-pencil-alt" />
+                <i className="fas fa-pencil-alt" />
               </td>
               <td> {book.author}</td>
             </tr>
             <tr>
               <td>
-                <i class="far fa-calendar-alt" />
+                <i className="far fa-calendar-alt" />
               </td>
               <td> {book.published}</td>
             </tr>
             <tr>
               <td>
-                <i class="far fa-user" />
+                <i className="far fa-user" />
               </td>
               <td> {book.chosenBy}</td>
             </tr>
             <tr>
               <td>
-                <i class="fas fa-book-open" />
+                <i className="fas fa-book-open" />
               </td>
               <td> {book.pages}</td>
+            </tr>
+            <tr>
+              <td>
+                <i className="fas fa-dice" />
+              </td>
+              <td> {book.terningkast.Levin}</td>
             </tr>
           </tr>
         </table>
