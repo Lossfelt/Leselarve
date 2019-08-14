@@ -3,6 +3,15 @@ import React from "react";
 class Book extends React.Component {
   render() {
     const book = this.props.book;
+
+    var gjennomsnittligTerningkast = 0;
+    var terningkastListe = "";
+    book.terningkastene.forEach(element => {
+      gjennomsnittligTerningkast += element.terningkast;
+      terningkastListe += element.medlem + " : " + element.terningkast + "\n";
+    });
+    gjennomsnittligTerningkast = gjennomsnittligTerningkast / 5;
+
     return (
       <div>
         <table>
@@ -54,7 +63,10 @@ class Book extends React.Component {
               <td>
                 <i className="fas fa-dice" />
               </td>
-              <td> {book.terningkast.Levin}</td>
+              <td className="tooltip">
+                {gjennomsnittligTerningkast}
+                <span className="tooltiptext">{terningkastListe}</span>
+              </td>
             </tr>
           </tr>
         </table>

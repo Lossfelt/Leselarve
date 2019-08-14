@@ -137,3 +137,41 @@ table.center {
   background-color: #51b7ff;
   color: white;
 }
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black; /* If you want dots under the hoverable text */
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: lightblue;
+  color: rgb(0, 0, 0);
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+  white-space: pre;
+
+  /* Position the tooltip text  */
+  position: absolute;
+  z-index: 1;
+  top: -200%;
+  left: 120%;
+}
+
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 100%; /* To the left of the tooltip */
+  margin-top: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent lightblue transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
