@@ -100,7 +100,8 @@
       { "medlem": "Levin", "terningkast": 0 },
       { "medlem": "Øivind", "terningkast": 0 },
       { "medlem": "Silje", "terningkast": 4 },
-      { "medlem": "Ida", "terningkast": 0 }
+      { "medlem": "Ida", "terningkast": 0 },
+      { "medlem": "Heidi", "terningkast": 4 }
     ],
     "picture": "https://images.gr-assets.com/books/1377976717l/18137087.jpg"
   },
@@ -115,7 +116,8 @@
       { "medlem": "Levin", "terningkast": 0 },
       { "medlem": "Øivind", "terningkast": 0 },
       { "medlem": "Silje", "terningkast": 3 },
-      { "medlem": "Ida", "terningkast": 0 }
+      { "medlem": "Ida", "terningkast": 0 },
+      { "medlem": "Heidi", "terningkast": 4 }
     ],
     "picture": "https://images.gr-assets.com/books/1425647059l/25084525.jpg"
   },
@@ -323,7 +325,7 @@
       { "medlem": "Øivind", "terningkast": 0 },
       { "medlem": "Silje", "terningkast": 4 },
       { "medlem": "Ida", "terningkast": 0 },
-      { "medlem": "Heidi", "terningkast": 0 }
+      { "medlem": "Heidi", "terningkast": 3 }
     ],
     "picture": "https://images.gr-assets.com/books/1327128714l/28921.jpg"
   },
