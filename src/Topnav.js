@@ -7,6 +7,7 @@ class Topnav extends React.Component {
     this.state = { visibilityClassOfMenu: "dropdown-content-invisible" };
     this.handleSortClick = this.handleSortClick.bind(this);
     this.handleIconClick = this.handleIconClick.bind(this);
+    this.handleGrafEllerBøkerClick = this.handleGrafEllerBøkerClick.bind(this);
   }
 
   handleSortClick(e) {
@@ -18,6 +19,10 @@ class Topnav extends React.Component {
     this.state.visibilityClassOfMenu === "dropdown-content-invisible"
       ? this.setState({ visibilityClassOfMenu: "dropdown-content-visible" })
       : this.setState({ visibilityClassOfMenu: "dropdown-content-invisible" });
+  }
+
+  handleGrafEllerBøkerClick(e) {
+    this.props.handleGrafEllerBøkerClick(e.target.id);
   }
 
   render() {
@@ -60,6 +65,20 @@ class Topnav extends React.Component {
             <i className="fa fa-bars" />
           </button>
           <div className={this.state.visibilityClassOfMenu}>
+            <button
+              className="button"
+              id="Grafer"
+              onClick={this.handleGrafEllerBøkerClick}
+            >
+              Grafer
+            </button>
+            <button
+              className="button"
+              id="Bøker"
+              onClick={this.handleGrafEllerBøkerClick}
+            >
+              Bøker
+            </button>
             <button className="headerbtn">
               Sortering <i className={sortingArrow} />
             </button>

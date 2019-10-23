@@ -1,6 +1,7 @@
 import React from "react";
 import Book from "./Book";
 import Topnav from "./Topnav";
+import Chart from "./Chart";
 
 class Presentation extends React.Component {
   constructor(props) {
@@ -8,9 +9,11 @@ class Presentation extends React.Component {
     this.state = {
       myTopnavClass: "topnav",
       sortBy: "numberInLine",
-      desc: true
+      desc: true,
+      grafEllerBøker: "Bøker"
     };
     this.handleSortClick = this.handleSortClick.bind(this);
+    this.handleGrafEllerBøkerClick = this.handleGrafEllerBøkerClick.bind(this);
   }
 
   handleSortClick(mottatt) {
@@ -20,6 +23,10 @@ class Presentation extends React.Component {
         desc: !prevState.desc
       }));
     }
+  }
+
+  handleGrafEllerBøkerClick(e) {
+    this.setState({ grafEllerBøker: e });
   }
 
   render() {
@@ -63,14 +70,23 @@ class Presentation extends React.Component {
         </tr>
       );
     });
+
+    var grafEllerBøker = "";
+    if (this.state.grafEllerBøker === "Bøker") {
+      grafEllerBøker = <table className="center">{liste}</table>;
+    } else {
+      grafEllerBøker = <Chart />;
+    }
+
     return (
       <div>
         <Topnav
           myTopnavClass={this.state.myTopnavClass}
           handleSortClick={this.handleSortClick}
           desc={this.state.desc}
+          handleGrafEllerBøkerClick={this.handleGrafEllerBøkerClick}
         />
-        <table className="center">{liste}</table>
+        {grafEllerBøker}
       </div>
     );
   }
