@@ -75,7 +75,7 @@ class Presentation extends React.Component {
     if (this.state.grafEllerBøker === "Bøker") {
       grafEllerBøker = <table className="center">{liste}</table>;
     } else {
-      grafEllerBøker = <Chart />;
+      grafEllerBøker = <Chart books={this.props.books} />;
     }
 
     return (
