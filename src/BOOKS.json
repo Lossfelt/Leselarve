@@ -7,7 +7,7 @@
     "pages": 239,
     "numberInLine": 1,
     "terningkastene": [
-      { "medlem": "Levin", "terningkast": 0 },
+      { "medlem": "Levin", "terningkast": 3 },
       { "medlem": "Øivind", "terningkast": 0 },
       { "medlem": "Silje", "terningkast": 5 },
       { "medlem": "Ida", "terningkast": 0 }
@@ -22,7 +22,7 @@
     "pages": 181,
     "numberInLine": 2,
     "terningkastene": [
-      { "medlem": "Levin", "terningkast": 0 },
+      { "medlem": "Levin", "terningkast": 4 },
       { "medlem": "Øivind", "terningkast": 0 },
       { "medlem": "Silje", "terningkast": 4 },
       { "medlem": "Ida", "terningkast": 0 }
@@ -37,7 +37,7 @@
     "pages": 328,
     "numberInLine": 3,
     "terningkastene": [
-      { "medlem": "Levin", "terningkast": 0 },
+      { "medlem": "Levin", "terningkast": 5 },
       { "medlem": "Øivind", "terningkast": 0 },
       { "medlem": "Silje", "terningkast": 4 },
       { "medlem": "Ida", "terningkast": 0 }
@@ -52,7 +52,7 @@
     "pages": 220,
     "numberInLine": 4,
     "terningkastene": [
-      { "medlem": "Levin", "terningkast": 0 },
+      { "medlem": "Levin", "terningkast": 3 },
       { "medlem": "Øivind", "terningkast": 0 },
       { "medlem": "Silje", "terningkast": 5 },
       { "medlem": "Ida", "terningkast": 0 }
@@ -67,7 +67,7 @@
     "pages": 176,
     "numberInLine": 5,
     "terningkastene": [
-      { "medlem": "Levin", "terningkast": 0 },
+      { "medlem": "Levin", "terningkast": 4 },
       { "medlem": "Øivind", "terningkast": 0 },
       { "medlem": "Silje", "terningkast": 6 },
       { "medlem": "Ida", "terningkast": 0 }
@@ -82,7 +82,7 @@
     "pages": 288,
     "numberInLine": 6,
     "terningkastene": [
-      { "medlem": "Levin", "terningkast": 0 },
+      { "medlem": "Levin", "terningkast": 5 },
       { "medlem": "Øivind", "terningkast": 0 },
       { "medlem": "Silje", "terningkast": 3 },
       { "medlem": "Ida", "terningkast": 0 }
@@ -97,7 +97,7 @@
     "pages": 621,
     "numberInLine": 7,
     "terningkastene": [
-      { "medlem": "Levin", "terningkast": 0 },
+      { "medlem": "Levin", "terningkast": 5 },
       { "medlem": "Øivind", "terningkast": 0 },
       { "medlem": "Silje", "terningkast": 4 },
       { "medlem": "Ida", "terningkast": 0 },
@@ -113,7 +113,7 @@
     "pages": 404,
     "numberInLine": 8,
     "terningkastene": [
-      { "medlem": "Levin", "terningkast": 0 },
+      { "medlem": "Levin", "terningkast": 3 },
       { "medlem": "Øivind", "terningkast": 0 },
       { "medlem": "Silje", "terningkast": 3 },
       { "medlem": "Ida", "terningkast": 0 },
@@ -129,7 +129,7 @@
     "pages": 486,
     "numberInLine": 9,
     "terningkastene": [
-      { "medlem": "Levin", "terningkast": 0 },
+      { "medlem": "Levin", "terningkast": 4 },
       { "medlem": "Øivind", "terningkast": 0 },
       { "medlem": "Silje", "terningkast": 3 },
       { "medlem": "Ida", "terningkast": 0 },
@@ -145,7 +145,7 @@
     "pages": 395,
     "numberInLine": 10,
     "terningkastene": [
-      { "medlem": "Levin", "terningkast": 0 },
+      { "medlem": "Levin", "terningkast": 4 },
       { "medlem": "Øivind", "terningkast": 0 },
       { "medlem": "Silje", "terningkast": 4 },
       { "medlem": "Ida", "terningkast": 0 },
@@ -161,7 +161,7 @@
     "pages": 176,
     "numberInLine": 11,
     "terningkastene": [
-      { "medlem": "Levin", "terningkast": 0 },
+      { "medlem": "Levin", "terningkast": 5 },
       { "medlem": "Øivind", "terningkast": 0 },
       { "medlem": "Silje", "terningkast": 5 },
       { "medlem": "Ida", "terningkast": 0 },
@@ -177,7 +177,7 @@
     "pages": 142,
     "numberInLine": 12,
     "terningkastene": [
-      { "medlem": "Levin", "terningkast": 0 },
+      { "medlem": "Levin", "terningkast": 5 },
       { "medlem": "Øivind", "terningkast": 0 },
       { "medlem": "Silje", "terningkast": 4 },
       { "medlem": "Ida", "terningkast": 0 },
@@ -193,7 +193,7 @@
     "pages": 191,
     "numberInLine": 13,
     "terningkastene": [
-      { "medlem": "Levin", "terningkast": 0 },
+      { "medlem": "Levin", "terningkast": 4 },
       { "medlem": "Øivind", "terningkast": 0 },
       { "medlem": "Silje", "terningkast": 5 },
       { "medlem": "Ida", "terningkast": 0 },
@@ -209,7 +209,7 @@
     "pages": 192,
     "numberInLine": 14,
     "terningkastene": [
-      { "medlem": "Levin", "terningkast": 0 },
+      { "medlem": "Levin", "terningkast": 3 },
       { "medlem": "Øivind", "terningkast": 0 },
       { "medlem": "Silje", "terningkast": 5 },
       { "medlem": "Ida", "terningkast": 0 },
@@ -225,7 +225,7 @@
     "pages": 439,
     "numberInLine": 15,
     "terningkastene": [
-      { "medlem": "Levin", "terningkast": 0 },
+      { "medlem": "Levin", "terningkast": 6 },
       { "medlem": "Øivind", "terningkast": 0 },
       { "medlem": "Silje", "terningkast": 6 },
       { "medlem": "Ida", "terningkast": 0 },
@@ -241,7 +241,7 @@
     "pages": 239,
     "numberInLine": 16,
     "terningkastene": [
-      { "medlem": "Levin", "terningkast": 0 },
+      { "medlem": "Levin", "terningkast": 4 },
       { "medlem": "Øivind", "terningkast": 0 },
       { "medlem": "Silje", "terningkast": 4 },
       { "medlem": "Ida", "terningkast": 0 },
@@ -257,7 +257,7 @@
     "pages": 279,
     "numberInLine": 17,
     "terningkastene": [
-      { "medlem": "Levin", "terningkast": 0 },
+      { "medlem": "Levin", "terningkast": 5 },
       { "medlem": "Øivind", "terningkast": 0 },
       { "medlem": "Silje", "terningkast": 5 },
       { "medlem": "Ida", "terningkast": 0 },
@@ -273,7 +273,7 @@
     "pages": 1079,
     "numberInLine": 18,
     "terningkastene": [
-      { "medlem": "Levin", "terningkast": 0 },
+      { "medlem": "Levin", "terningkast": 4 },
       { "medlem": "Øivind", "terningkast": 0 },
       { "medlem": "Silje", "terningkast": 0 },
       { "medlem": "Ida", "terningkast": 0 },
@@ -289,7 +289,7 @@
     "pages": 336,
     "numberInLine": 19,
     "terningkastene": [
-      { "medlem": "Levin", "terningkast": 0 },
+      { "medlem": "Levin", "terningkast": 6 },
       { "medlem": "Øivind", "terningkast": 0 },
       { "medlem": "Silje", "terningkast": 6 },
       { "medlem": "Ida", "terningkast": 0 },
@@ -305,7 +305,7 @@
     "pages": 257,
     "numberInLine": 20,
     "terningkastene": [
-      { "medlem": "Levin", "terningkast": 0 },
+      { "medlem": "Levin", "terningkast": 4 },
       { "medlem": "Øivind", "terningkast": 0 },
       { "medlem": "Silje", "terningkast": 3 },
       { "medlem": "Ida", "terningkast": 0 },
@@ -321,7 +321,7 @@
     "pages": 245,
     "numberInLine": 21,
     "terningkastene": [
-      { "medlem": "Levin", "terningkast": 0 },
+      { "medlem": "Levin", "terningkast": 4 },
       { "medlem": "Øivind", "terningkast": 0 },
       { "medlem": "Silje", "terningkast": 4 },
       { "medlem": "Ida", "terningkast": 0 },
@@ -337,7 +337,7 @@
     "pages": 224,
     "numberInLine": 22,
     "terningkastene": [
-      { "medlem": "Levin", "terningkast": 0 },
+      { "medlem": "Levin", "terningkast": 5 },
       { "medlem": "Øivind", "terningkast": 0 },
       { "medlem": "Silje", "terningkast": 5 },
       { "medlem": "Ida", "terningkast": 0 },
@@ -417,12 +417,28 @@
     "pages": 304,
     "numberInLine": 27,
     "terningkastene": [
+      { "medlem": "Levin", "terningkast": 5 },
+      { "medlem": "Øivind", "terningkast": 6 },
+      { "medlem": "Silje", "terningkast": 5 },
+      { "medlem": "Ida", "terningkast": 4 },
+      { "medlem": "Heidi", "terningkast": 5 }
+    ],
+    "picture": "https://dj4fsg3e1je59.cloudfront.net/9781473221635/img/0"
+  },
+  {
+    "title": "Sommerlys, og så kommer natten",
+    "author": "Jón Kalman Stefánsson",
+    "published": 2005,
+    "chosenBy": "Ida",
+    "pages": 255,
+    "numberInLine": 28,
+    "terningkastene": [
       { "medlem": "Levin", "terningkast": 0 },
       { "medlem": "Øivind", "terningkast": 0 },
       { "medlem": "Silje", "terningkast": 0 },
       { "medlem": "Ida", "terningkast": 0 },
       { "medlem": "Heidi", "terningkast": 0 }
     ],
-    "picture": "https://dj4fsg3e1je59.cloudfront.net/9781473221635/img/0"
+    "picture": "https://dj4fsg3e1je59.cloudfront.net/9788232802678/img/0"
   }
 ]

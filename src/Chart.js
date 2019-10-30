@@ -1,6 +1,11 @@
 import React from "react";
 import { Bar, Line, Pie } from "react-chartjs-2";
-
+/* ideer til grafer:
+terningkast, fra høyest til lavest, inkludert sprik innad
+gjennomsnittlig år den enkelte velger bok fra, inkludert sprik
+terningkast per person
+bok per land, geografisk kart
+*/
 class Chart extends React.Component {
   render() {
     var books = this.props.books;
