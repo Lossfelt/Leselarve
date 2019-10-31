@@ -75,7 +75,8 @@ class Graf extends React.Component {
             },
             vAxis: {
               title: "Antall sider"
-            }
+            },
+            backgroundColor: "#d6eeff"
           }}
           legendToggle
         />
