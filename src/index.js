@@ -4,7 +4,4 @@ import "./index.css";
 import BOOKS from "./BOOKS.json";
 import Presentation from "./Presentation";
 
-render(
-<Presentation books={BOOKS}/>,
-  document.getElementById('root')
-);
+render(<Presentation books={BOOKS} />, document.getElementById("root"));

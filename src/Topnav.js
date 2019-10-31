@@ -13,6 +13,7 @@ class Topnav extends React.Component {
   handleSortClick(e) {
     this.props.handleSortClick(e.target.id);
     this.setState({ currentlyActive: e.target.id });
+    this.setState({ visibilityClassOfMenu: "dropdown-content-invisible" });
   }
 
   handleIconClick() {
@@ -23,6 +24,7 @@ class Topnav extends React.Component {
 
   handleGrafEllerBøkerClick(e) {
     this.props.handleGrafEllerBøkerClick(e.target.id);
+    this.setState({ visibilityClassOfMenu: "dropdown-content-invisible" });
   }
 
   render() {

@@ -1,8 +1,7 @@
 import React from "react";
 import Book from "./Book";
 import Topnav from "./Topnav";
-import Chart from "./Chart";
-import Graf from "./Graf.js";
+import Grafer from "./Grafer.js";
 
 class Presentation extends React.Component {
   constructor(props) {
@@ -76,8 +75,7 @@ class Presentation extends React.Component {
     if (this.state.grafEllerBøker === "Bøker") {
       grafEllerBøker = <table className="center">{liste}</table>;
     } else {
-      /* grafEllerBøker = <Chart books={this.props.books} />; */
-      grafEllerBøker = <Graf books={this.props.books} />;
+      grafEllerBøker = <Grafer books={this.props.books} />;
     }
 
     return (
