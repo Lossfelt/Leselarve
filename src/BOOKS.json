@@ -8,7 +8,7 @@
     "numberInLine": 1,
     "terningkastene": [
       { "medlem": "Levin", "terningkast": 3 },
-      { "medlem": "Øivind", "terningkast": 0 },
+      { "medlem": "Øivind", "terningkast": 5 },
       { "medlem": "Silje", "terningkast": 5 },
       { "medlem": "Ida", "terningkast": 0 }
     ],
@@ -23,7 +23,7 @@
     "numberInLine": 2,
     "terningkastene": [
       { "medlem": "Levin", "terningkast": 4 },
-      { "medlem": "Øivind", "terningkast": 0 },
+      { "medlem": "Øivind", "terningkast": 1 },
       { "medlem": "Silje", "terningkast": 4 },
       { "medlem": "Ida", "terningkast": 0 }
     ],
@@ -38,7 +38,7 @@
     "numberInLine": 3,
     "terningkastene": [
       { "medlem": "Levin", "terningkast": 5 },
-      { "medlem": "Øivind", "terningkast": 0 },
+      { "medlem": "Øivind", "terningkast": 6 },
       { "medlem": "Silje", "terningkast": 4 },
       { "medlem": "Ida", "terningkast": 0 }
     ],
@@ -53,7 +53,7 @@
     "numberInLine": 4,
     "terningkastene": [
       { "medlem": "Levin", "terningkast": 3 },
-      { "medlem": "Øivind", "terningkast": 0 },
+      { "medlem": "Øivind", "terningkast": 6 },
       { "medlem": "Silje", "terningkast": 5 },
       { "medlem": "Ida", "terningkast": 0 }
     ],
@@ -68,7 +68,7 @@
     "numberInLine": 5,
     "terningkastene": [
       { "medlem": "Levin", "terningkast": 4 },
-      { "medlem": "Øivind", "terningkast": 0 },
+      { "medlem": "Øivind", "terningkast": 6 },
       { "medlem": "Silje", "terningkast": 6 },
       { "medlem": "Ida", "terningkast": 0 }
     ],
@@ -83,7 +83,7 @@
     "numberInLine": 6,
     "terningkastene": [
       { "medlem": "Levin", "terningkast": 5 },
-      { "medlem": "Øivind", "terningkast": 0 },
+      { "medlem": "Øivind", "terningkast": 3 },
       { "medlem": "Silje", "terningkast": 3 },
       { "medlem": "Ida", "terningkast": 0 }
     ],
@@ -98,7 +98,7 @@
     "numberInLine": 7,
     "terningkastene": [
       { "medlem": "Levin", "terningkast": 5 },
-      { "medlem": "Øivind", "terningkast": 0 },
+      { "medlem": "Øivind", "terningkast": 5 },
       { "medlem": "Silje", "terningkast": 4 },
       { "medlem": "Ida", "terningkast": 0 },
       { "medlem": "Heidi", "terningkast": 4 }
@@ -114,7 +114,7 @@
     "numberInLine": 8,
     "terningkastene": [
       { "medlem": "Levin", "terningkast": 3 },
-      { "medlem": "Øivind", "terningkast": 0 },
+      { "medlem": "Øivind", "terningkast": 3 },
       { "medlem": "Silje", "terningkast": 3 },
       { "medlem": "Ida", "terningkast": 0 },
       { "medlem": "Heidi", "terningkast": 4 }
@@ -130,7 +130,7 @@
     "numberInLine": 9,
     "terningkastene": [
       { "medlem": "Levin", "terningkast": 4 },
-      { "medlem": "Øivind", "terningkast": 0 },
+      { "medlem": "Øivind", "terningkast": 4 },
       { "medlem": "Silje", "terningkast": 3 },
       { "medlem": "Ida", "terningkast": 0 },
       { "medlem": "Heidi", "terningkast": 3 }
@@ -146,7 +146,7 @@
     "numberInLine": 10,
     "terningkastene": [
       { "medlem": "Levin", "terningkast": 4 },
-      { "medlem": "Øivind", "terningkast": 0 },
+      { "medlem": "Øivind", "terningkast": 6 },
       { "medlem": "Silje", "terningkast": 4 },
       { "medlem": "Ida", "terningkast": 0 },
       { "medlem": "Heidi", "terningkast": 5 }
@@ -162,7 +162,7 @@
     "numberInLine": 11,
     "terningkastene": [
       { "medlem": "Levin", "terningkast": 5 },
-      { "medlem": "Øivind", "terningkast": 0 },
+      { "medlem": "Øivind", "terningkast": 3 },
       { "medlem": "Silje", "terningkast": 5 },
       { "medlem": "Ida", "terningkast": 0 },
       { "medlem": "Heidi", "terningkast": 5 }
@@ -178,7 +178,7 @@
     "numberInLine": 12,
     "terningkastene": [
       { "medlem": "Levin", "terningkast": 5 },
-      { "medlem": "Øivind", "terningkast": 0 },
+      { "medlem": "Øivind", "terningkast": 4 },
       { "medlem": "Silje", "terningkast": 4 },
       { "medlem": "Ida", "terningkast": 0 },
       { "medlem": "Heidi", "terningkast": 4 }
@@ -194,7 +194,7 @@
     "numberInLine": 13,
     "terningkastene": [
       { "medlem": "Levin", "terningkast": 4 },
-      { "medlem": "Øivind", "terningkast": 0 },
+      { "medlem": "Øivind", "terningkast": 5 },
       { "medlem": "Silje", "terningkast": 5 },
       { "medlem": "Ida", "terningkast": 0 },
       { "medlem": "Heidi", "terningkast": 5 }
@@ -210,7 +210,7 @@
     "numberInLine": 14,
     "terningkastene": [
       { "medlem": "Levin", "terningkast": 3 },
-      { "medlem": "Øivind", "terningkast": 0 },
+      { "medlem": "Øivind", "terningkast": 5 },
       { "medlem": "Silje", "terningkast": 5 },
       { "medlem": "Ida", "terningkast": 0 },
       { "medlem": "Heidi", "terningkast": 5 }
@@ -226,7 +226,7 @@
     "numberInLine": 15,
     "terningkastene": [
       { "medlem": "Levin", "terningkast": 6 },
-      { "medlem": "Øivind", "terningkast": 0 },
+      { "medlem": "Øivind", "terningkast": 6 },
       { "medlem": "Silje", "terningkast": 6 },
       { "medlem": "Ida", "terningkast": 0 },
       { "medlem": "Heidi", "terningkast": 5 }
@@ -242,7 +242,7 @@
     "numberInLine": 16,
     "terningkastene": [
       { "medlem": "Levin", "terningkast": 4 },
-      { "medlem": "Øivind", "terningkast": 0 },
+      { "medlem": "Øivind", "terningkast": 3 },
       { "medlem": "Silje", "terningkast": 4 },
       { "medlem": "Ida", "terningkast": 0 },
       { "medlem": "Heidi", "terningkast": 4 }
@@ -258,7 +258,7 @@
     "numberInLine": 17,
     "terningkastene": [
       { "medlem": "Levin", "terningkast": 5 },
-      { "medlem": "Øivind", "terningkast": 0 },
+      { "medlem": "Øivind", "terningkast": 4 },
       { "medlem": "Silje", "terningkast": 5 },
       { "medlem": "Ida", "terningkast": 0 },
       { "medlem": "Heidi", "terningkast": 5 }
@@ -290,7 +290,7 @@
     "numberInLine": 19,
     "terningkastene": [
       { "medlem": "Levin", "terningkast": 6 },
-      { "medlem": "Øivind", "terningkast": 0 },
+      { "medlem": "Øivind", "terningkast": 6 },
       { "medlem": "Silje", "terningkast": 6 },
       { "medlem": "Ida", "terningkast": 0 },
       { "medlem": "Heidi", "terningkast": 5 }
@@ -306,7 +306,7 @@
     "numberInLine": 20,
     "terningkastene": [
       { "medlem": "Levin", "terningkast": 4 },
-      { "medlem": "Øivind", "terningkast": 0 },
+      { "medlem": "Øivind", "terningkast": 2 },
       { "medlem": "Silje", "terningkast": 3 },
       { "medlem": "Ida", "terningkast": 0 },
       { "medlem": "Heidi", "terningkast": 3 }
@@ -322,7 +322,7 @@
     "numberInLine": 21,
     "terningkastene": [
       { "medlem": "Levin", "terningkast": 4 },
-      { "medlem": "Øivind", "terningkast": 0 },
+      { "medlem": "Øivind", "terningkast": 3 },
       { "medlem": "Silje", "terningkast": 4 },
       { "medlem": "Ida", "terningkast": 0 },
       { "medlem": "Heidi", "terningkast": 3 }
@@ -338,7 +338,7 @@
     "numberInLine": 22,
     "terningkastene": [
       { "medlem": "Levin", "terningkast": 5 },
-      { "medlem": "Øivind", "terningkast": 0 },
+      { "medlem": "Øivind", "terningkast": 6 },
       { "medlem": "Silje", "terningkast": 5 },
       { "medlem": "Ida", "terningkast": 0 },
       { "medlem": "Heidi", "terningkast": 5 }
