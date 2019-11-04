@@ -54,11 +54,7 @@ export function SiderPrMedlem(books) {
   var muligheter = {
     title: "Gjennomsnittlig antall sider per person",
     hAxis: {
-      title: "Medlemmer",
       minValue: 0
-    },
-    vAxis: {
-      title: "Antall sider"
     },
     backgroundColor: "#d6eeff"
   };
