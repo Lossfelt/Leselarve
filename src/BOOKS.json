@@ -2,6 +2,7 @@
   {
     "title": "Trilogien",
     "author": "Jon Fosse",
+    "authorNationality": "Norway",
     "published": 2014,
     "chosenBy": "Øivind",
     "pages": 239,
@@ -17,6 +18,7 @@
   {
     "title": "Null",
     "author": "Gine Cornelia Pedersen",
+    "authorNationality": "Norway",
     "published": 2013,
     "chosenBy": "Silje",
     "pages": 181,
@@ -32,6 +34,7 @@
   {
     "title": "1984",
     "author": "George Orwell",
+    "authorNationality": "Britain",
     "published": 1949,
     "chosenBy": "Levin",
     "pages": 328,
@@ -47,6 +50,7 @@
   {
     "title": "Farvel til Eddy Bellegueule",
     "author": "Édouard Louis",
+    "authorNationality": "France",
     "published": 2014,
     "chosenBy": "Ida",
     "pages": 220,
@@ -62,6 +66,7 @@
   {
     "title": "Merkelig vær i Tokyo",
     "author": "Hiromi Kawakami",
+    "authorNationality": "Japan",
     "published": 2001,
     "chosenBy": "Øivind",
     "pages": 176,
@@ -77,6 +82,7 @@
   {
     "title": "The Ice Storm",
     "author": "Rick Moody",
+    "authorNationality": "USA",
     "published": 1994,
     "chosenBy": "Silje",
     "pages": 288,
@@ -92,6 +98,7 @@
   {
     "title": "Odinsbarn",
     "author": "Siri Pettersen",
+    "authorNationality": "Norway",
     "published": 2013,
     "chosenBy": "Levin",
     "pages": 621,
@@ -108,6 +115,7 @@
   {
     "title": "Mi briljante venninne",
     "author": "Elena Ferrante",
+    "authorNationality": "Italy",
     "published": 2011,
     "chosenBy": "Ida",
     "pages": 404,
@@ -124,6 +132,7 @@
   {
     "title": "Fellside",
     "author": "M.R. Carey",
+    "authorNationality": "Britain",
     "published": 2016,
     "chosenBy": "Heidi",
     "pages": 486,
@@ -140,6 +149,7 @@
   {
     "title": "Reisen til nattens ende",
     "author": "Louis-Ferdinand Céline",
+    "authorNationality": "France",
     "published": 1932,
     "chosenBy": "Øivind",
     "pages": 395,
@@ -156,6 +166,7 @@
   {
     "title": "Imot naturen",
     "author": "Tomas Espedal",
+    "authorNationality": "Norway",
     "published": 2011,
     "chosenBy": "Silje",
     "pages": 176,
@@ -172,6 +183,7 @@
   {
     "title": "Breakfast at Tiffany's",
     "author": "Truman Capote",
+    "authorNationality": "USA",
     "published": 1958,
     "chosenBy": "Levin",
     "pages": 142,
@@ -188,6 +200,7 @@
   {
     "title": "Et norsk hus",
     "author": "Vigdis Hjorth",
+    "authorNationality": "Norway",
     "published": 2014,
     "chosenBy": "Ida",
     "pages": 191,
@@ -204,6 +217,7 @@
   {
     "title": "Fever Dream",
     "author": "Samanta Schweblin",
+    "authorNationality": "Argentina",
     "published": 2014,
     "chosenBy": "Heidi",
     "pages": 192,
@@ -220,6 +234,7 @@
   {
     "title": "Den flammende verden",
     "author": "Siri Hustvedt",
+    "authorNationality": "USA",
     "published": 2014,
     "chosenBy": "Øivind",
     "pages": 439,
@@ -236,6 +251,7 @@
   {
     "title": "Oppløsningstendenser",
     "author": "Nina Lykke",
+    "authorNationality": "Norway",
     "published": 2013,
     "chosenBy": "Silje",
     "pages": 239,
@@ -252,6 +268,7 @@
   {
     "title": "Pride & Prejudice",
     "author": "Jane Austen",
+    "authorNationality": "Britain",
     "published": 1813,
     "chosenBy": "Levin",
     "pages": 279,
@@ -268,6 +285,7 @@
   {
     "title": "Infinite Jest",
     "author": "David Foster Wallace",
+    "authorNationality": "USA",
     "published": 1996,
     "chosenBy": "Ida",
     "pages": 1079,
@@ -284,6 +302,7 @@
   {
     "title": "Station Eleven",
     "author": "Emily St. John Mandel",
+    "authorNationality": "Canada",
     "published": 2014,
     "chosenBy": "Heidi",
     "pages": 336,
@@ -300,6 +319,7 @@
   {
     "title": "Alle Dagers Ende",
     "author": "Jenny Erpenbeck",
+    "authorNationality": "Germany",
     "published": 2018,
     "chosenBy": "Øivind",
     "pages": 257,
@@ -316,6 +336,7 @@
   {
     "title": "Resten av dagen",
     "author": "Kazuo Ishiguro",
+    "authorNationality": "Britain",
     "published": 1989,
     "chosenBy": "Silje",
     "pages": 245,
@@ -332,6 +353,7 @@
   {
     "title": "All Quiet on the Western Front",
     "author": "Erich Maria Remarque",
+    "authorNationality": "Germany",
     "published": 1929,
     "chosenBy": "Levin",
     "pages": 224,
@@ -348,6 +370,7 @@
   {
     "title": "Tung Tids Tale",
     "author": "Olaug Nilssen",
+    "authorNationality": "Norway",
     "published": 2017,
     "chosenBy": "Ida",
     "pages": 155,
@@ -364,6 +387,7 @@
   {
     "title": "The Rest of Us Just Live Here",
     "author": "Patrick Ness",
+    "authorNationality": "Britain",
     "published": 2015,
     "chosenBy": "Heidi",
     "pages": 317,
@@ -380,6 +404,7 @@
   {
     "title": "Kraften",
     "author": "Naomi Alderman",
+    "authorNationality": "Britain",
     "published": 2017,
     "chosenBy": "Øivind",
     "pages": 433,
@@ -396,6 +421,7 @@
   {
     "title": "Vernon Subutex 1",
     "author": "Virginie Despentes",
+    "authorNationality": "France",
     "published": 2015,
     "chosenBy": "Silje",
     "pages": 368,
@@ -412,6 +438,7 @@
   {
     "title": "The Left Hand of Darkness",
     "author": "Ursula K. Le Guin",
+    "authorNationality": "USA",
     "published": 1969,
     "chosenBy": "Levin",
     "pages": 304,
@@ -428,6 +455,7 @@
   {
     "title": "Sommerlys, og så kommer natten",
     "author": "Jón Kalman Stefánsson",
+    "authorNationality": "Iceland",
     "published": 2005,
     "chosenBy": "Ida",
     "pages": 255,
