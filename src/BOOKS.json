@@ -461,12 +461,31 @@
     "pages": 255,
     "numberInLine": 28,
     "terningkastene": [
+      { "medlem": "Levin", "terningkast": 5 },
+      { "medlem": "Øivind", "terningkast": 5 },
+      { "medlem": "Silje", "terningkast": 5 },
+      { "medlem": "Ida", "terningkast": 6 },
+      { "medlem": "Heidi", "terningkast": 4 },
+      { "medlem": "Kyrre", "terningkast": 4 }
+    ],
+    "picture": "https://dj4fsg3e1je59.cloudfront.net/9788232802678/img/0"
+  },
+  {
+    "title": "For øvrig mener jeg at Karthago bør ødelegges",
+    "author": "Kyrre Andreassen",
+    "authorNationality": "Norway",
+    "published": 2016,
+    "chosenBy": "Heidi",
+    "pages": 358,
+    "numberInLine": 29,
+    "terningkastene": [
       { "medlem": "Levin", "terningkast": 0 },
       { "medlem": "Øivind", "terningkast": 0 },
       { "medlem": "Silje", "terningkast": 0 },
       { "medlem": "Ida", "terningkast": 0 },
-      { "medlem": "Heidi", "terningkast": 0 }
+      { "medlem": "Heidi", "terningkast": 0 },
+      { "medlem": "Kyrre", "terningkast": 0 }
     ],
-    "picture": "https://dj4fsg3e1je59.cloudfront.net/9788232802678/img/0"
+    "picture": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1500964352l/35823583._SY475_.jpg"
   }
 ]

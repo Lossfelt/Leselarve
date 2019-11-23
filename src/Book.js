@@ -11,7 +11,9 @@ class Book extends React.Component {
       terningkastListe += element.medlem + " : " + element.terningkast + "\n";
     });
     gjennomsnittligTerningkast =
-      gjennomsnittligTerningkast / book.terningkastene.length;
+      Math.round(
+        (gjennomsnittligTerningkast / book.terningkastene.length) * 10
+      ) / 10;
 
     return (
       <div>
