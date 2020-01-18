@@ -479,6 +479,24 @@
     "pages": 358,
     "numberInLine": 29,
     "terningkastene": [
+      { "medlem": "Levin", "terningkast": 2 },
+      { "medlem": "Øivind", "terningkast": 4 },
+      { "medlem": "Silje", "terningkast": 5 },
+      { "medlem": "Ida", "terningkast": 3 },
+      { "medlem": "Heidi", "terningkast": 6 },
+      { "medlem": "Kyrre", "terningkast": 4 }
+    ],
+    "picture": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1500964352l/35823583._SY475_.jpg"
+  },
+  {
+    "title": "Grief is the Thing with Feathers",
+    "author": "Max Porter",
+    "authorNationality": "United Kingdom",
+    "published": 2015,
+    "chosenBy": "Kyrre",
+    "pages": 114,
+    "numberInLine": 30,
+    "terningkastene": [
       { "medlem": "Levin", "terningkast": 0 },
       { "medlem": "Øivind", "terningkast": 0 },
       { "medlem": "Silje", "terningkast": 0 },
@@ -486,6 +504,6 @@
       { "medlem": "Heidi", "terningkast": 0 },
       { "medlem": "Kyrre", "terningkast": 0 }
     ],
-    "picture": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1500964352l/35823583._SY475_.jpg"
+    "picture": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1473000973l/29376835._SY475_.jpg"
   }
 ]

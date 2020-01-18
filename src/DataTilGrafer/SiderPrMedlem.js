@@ -29,6 +29,12 @@ export function SiderPrMedlem(books) {
       totaltSider: 0,
       antallBøker: 0,
       gjennomsnittligAntallSider: 0
+    },
+    {
+      Navn: "Kyrre",
+      totaltSider: 0,
+      antallBøker: 0,
+      gjennomsnittligAntallSider: 0
     }
   ];
 
