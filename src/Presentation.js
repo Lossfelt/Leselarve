@@ -17,11 +17,17 @@ class Presentation extends React.Component {
   }
 
   handleSortClick(mottatt) {
-    this.setState({ sortBy: mottatt });
+    if (this.state.grafEllerBøker === "Grafer") {
+      this.setState({ sortBy: mottatt, grafEllerBøker: "Bøker" });
+    } else {
+      this.setState({ sortBy: mottatt });
+    }
     if (this.state.sortBy === mottatt) {
-      this.setState(prevState => ({
-        desc: !prevState.desc
-      }));
+      if (this.state.desc) {
+        this.setState({ desc: false });
+      } else {
+        this.setState({ desc: true });
+      }
     }
   }
 
@@ -50,7 +56,9 @@ class Presentation extends React.Component {
 
     var books = [];
     if (
-      ["Heidi", "Ida", "Levin", "Silje", "Øivind"].includes(this.state.sortBy)
+      ["Kyrre", "Heidi", "Ida", "Levin", "Silje", "Øivind"].includes(
+        this.state.sortBy
+      )
     ) {
       var booksIntermediary = this.props.books;
       books = booksIntermediary.filter(

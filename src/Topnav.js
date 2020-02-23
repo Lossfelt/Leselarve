@@ -33,6 +33,7 @@ class Topnav extends React.Component {
     var forfatter = ["author", "button"];
     var publisert = ["published", "button"];
     var sider = ["pages", "button"];
+    var Kyrre = ["Kyrre", "button"];
     var Heidi = ["Heidi", "button"];
     var Ida = ["Ida", "button"];
     var Levin = ["Levin", "button"];
@@ -44,6 +45,7 @@ class Topnav extends React.Component {
       forfatter,
       publisert,
       sider,
+      Kyrre,
       Heidi,
       Ida,
       Levin,
@@ -111,6 +113,13 @@ class Topnav extends React.Component {
               onClick={this.handleSortClick}
             >
               Publisert
+            </button>
+            <button
+              id="Kyrre"
+              className={Kyrre[1]}
+              onClick={this.handleSortClick}
+            >
+              Kyrre
             </button>
             <button
               id="Heidi"
