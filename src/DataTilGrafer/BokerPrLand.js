@@ -27,7 +27,7 @@ export function BokerPrLand(books) {
   landeneOgAntall.forEach(element => {
     data.push(element);
   });
-  console.log(data);
+  //console.log(data);
   var options = {
     /* title: "Bøker pr land", */
     tooltip: { isHtml: true, trigger: "visible" },
