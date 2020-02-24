@@ -8,6 +8,7 @@ import { BokerPrLand } from "./DataTilGrafer/BokerPrLand";
 - terningkast, fra høyest til lavest, inkludert sprik innad
 - gjennomsnittlig år den enkelte velger bok fra, inkludert sprik
 - terningkast per person
+- ikke en graf, men mulight til å sortere på terningkast
 */
 
 class Grafer extends React.Component {
