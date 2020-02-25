@@ -43,7 +43,7 @@ export function TerningkastPrBok(books) {
       viewWindowMode: "explicit",
       viewWindow: {
         max: 6.5,
-        min: -0.5
+        min: 0.5
       }
     }
   };

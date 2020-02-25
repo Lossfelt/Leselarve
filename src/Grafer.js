@@ -4,6 +4,7 @@ import { SiderPrMedlem } from "./DataTilGrafer/SiderPrMedlem";
 import { BokerPrAarstall } from "./DataTilGrafer/BokerPrAarstall";
 import { BokerPrLand } from "./DataTilGrafer/BokerPrLand";
 import { TerningkastPrBok } from "./DataTilGrafer/TerningkastPrBok";
+import { TerningkastPrMedlem } from "./DataTilGrafer/TerningkastPrMedlem";
 
 /* ideer til grafer:
 - gjennomsnittlig år den enkelte velger bok fra, inkludert sprik
@@ -17,6 +18,7 @@ class Grafer extends React.Component {
     var bokerPrAarstall = BokerPrAarstall(this.props.books);
     var bokerPrLand = BokerPrLand(this.props.books);
     var terningkastPrBok = TerningkastPrBok(this.props.books);
+    var terningkastPrMedlem = TerningkastPrMedlem(this.props.books);
 
     return (
       <div>
@@ -34,6 +36,16 @@ class Grafer extends React.Component {
           data={bokerPrAarstall[0]}
           options={bokerPrAarstall[1]}
           legendToggle
+        />
+        <hr />
+        <Chart
+          width={"100%"}
+          height={"300px"}
+          chartType="ColumnChart"
+          loader={<div>Loading Chart</div>}
+          data={terningkastPrMedlem[0]}
+          options={terningkastPrMedlem[1]}
+          rootProps={{ "data-testid": "2" }}
         />
         <hr />
         <Chart
