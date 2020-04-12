@@ -515,6 +515,24 @@
     "pages": 181,
     "numberInLine": 31,
     "terningkastene": [
+      { "medlem": "Levin", "terningkast": 5 },
+      { "medlem": "Øivind", "terningkast": 3 },
+      { "medlem": "Silje", "terningkast": 2 },
+      { "medlem": "Ida", "terningkast": 4 },
+      { "medlem": "Heidi", "terningkast": 3 },
+      { "medlem": "Kyrre", "terningkast": 2 }
+    ],
+    "picture": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1559152440l/43459809._SX318_.jpg"
+  },
+  {
+    "title": "The Plot Against America",
+    "author": "Philip Roth",
+    "authorNationality": "US",
+    "published": 2004,
+    "chosenBy": "Silje",
+    "pages": 391,
+    "numberInLine": 32,
+    "terningkastene": [
       { "medlem": "Levin", "terningkast": 0 },
       { "medlem": "Øivind", "terningkast": 0 },
       { "medlem": "Silje", "terningkast": 0 },
@@ -522,6 +540,6 @@
       { "medlem": "Heidi", "terningkast": 0 },
       { "medlem": "Kyrre", "terningkast": 0 }
     ],
-    "picture": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1559152440l/43459809._SX318_.jpg"
+    "picture": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1487672117l/34364134._SY475_.jpg"
   }
 ]
