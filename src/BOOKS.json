@@ -533,6 +533,24 @@
     "pages": 391,
     "numberInLine": 32,
     "terningkastene": [
+      { "medlem": "Levin", "terningkast": 4 },
+      { "medlem": "Øivind", "terningkast": 2 },
+      { "medlem": "Silje", "terningkast": 1 },
+      { "medlem": "Ida", "terningkast": 5 },
+      { "medlem": "Heidi", "terningkast": 3 },
+      { "medlem": "Kyrre", "terningkast": 3 }
+    ],
+    "picture": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1487672117l/34364134._SY475_.jpg"
+  },
+  {
+    "title": "Things Fall Apart",
+    "author": "Chinua Achebe",
+    "authorNationality": "Nigeria",
+    "published": 1958,
+    "chosenBy": "Levin",
+    "pages": 212,
+    "numberInLine": 33,
+    "terningkastene": [
       { "medlem": "Levin", "terningkast": 0 },
       { "medlem": "Øivind", "terningkast": 0 },
       { "medlem": "Silje", "terningkast": 0 },
@@ -540,6 +558,6 @@
       { "medlem": "Heidi", "terningkast": 0 },
       { "medlem": "Kyrre", "terningkast": 0 }
     ],
-    "picture": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1487672117l/34364134._SY475_.jpg"
+    "picture": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1540069627l/42402467._SY475_.jpg"
   }
 ]
