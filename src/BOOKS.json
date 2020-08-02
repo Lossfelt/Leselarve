@@ -551,6 +551,24 @@
     "pages": 212,
     "numberInLine": 33,
     "terningkastene": [
+      { "medlem": "Levin", "terningkast": 3 },
+      { "medlem": "Øivind", "terningkast": 5 },
+      { "medlem": "Silje", "terningkast": 4 },
+      { "medlem": "Ida", "terningkast": 4 },
+      { "medlem": "Heidi", "terningkast": 4 },
+      { "medlem": "Kyrre", "terningkast": 3 }
+    ],
+    "picture": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1540069627l/42402467._SY475_.jpg"
+  },
+  {
+    "title": "Styrtet Engel",
+    "author": "Per Olov Enquist",
+    "authorNationality": "Sweden",
+    "published": 1985,
+    "chosenBy": "Ida",
+    "pages": 105,
+    "numberInLine": 34,
+    "terningkastene": [
       { "medlem": "Levin", "terningkast": 0 },
       { "medlem": "Øivind", "terningkast": 0 },
       { "medlem": "Silje", "terningkast": 0 },
@@ -558,6 +576,6 @@
       { "medlem": "Heidi", "terningkast": 0 },
       { "medlem": "Kyrre", "terningkast": 0 }
     ],
-    "picture": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1540069627l/42402467._SY475_.jpg"
+    "picture": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1313956735l/12407124.jpg"
   }
 ]
