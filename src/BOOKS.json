@@ -569,6 +569,24 @@
     "pages": 105,
     "numberInLine": 34,
     "terningkastene": [
+      { "medlem": "Levin", "terningkast": 3 },
+      { "medlem": "Øivind", "terningkast": 4 },
+      { "medlem": "Silje", "terningkast": 5 },
+      { "medlem": "Ida", "terningkast": 5 },
+      { "medlem": "Heidi", "terningkast": 4 },
+      { "medlem": "Kyrre", "terningkast": 6 }
+    ],
+    "picture": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1313956735l/12407124.jpg"
+  },
+  {
+    "title": "Beloved",
+    "author": "Toni Morrison",
+    "authorNationality": "US",
+    "published": 1987,
+    "chosenBy": "Heidi",
+    "pages": 324,
+    "numberInLine": 35,
+    "terningkastene": [
       { "medlem": "Levin", "terningkast": 0 },
       { "medlem": "Øivind", "terningkast": 0 },
       { "medlem": "Silje", "terningkast": 0 },
@@ -576,6 +594,6 @@
       { "medlem": "Heidi", "terningkast": 0 },
       { "medlem": "Kyrre", "terningkast": 0 }
     ],
-    "picture": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1313956735l/12407124.jpg"
+    "picture": "https://www.bokklubben.no/servlet/VisBildeServlet?produktId=20886761"
   }
 ]
