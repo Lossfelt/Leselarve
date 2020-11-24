@@ -587,6 +587,23 @@
     "pages": 324,
     "numberInLine": 35,
     "terningkastene": [
+      { "medlem": "Levin", "terningkast": 3 },
+      { "medlem": "Øivind", "terningkast": 3 },
+      { "medlem": "Silje", "terningkast": 2 },
+      { "medlem": "Ida", "terningkast": 5 },
+      { "medlem": "Kyrre", "terningkast": 4 }
+    ],
+    "picture": "https://www.bokklubben.no/servlet/VisBildeServlet?produktId=20886761"
+  },
+  {
+    "title": "To the Lighthouse",
+    "author": "Virginia Woolf",
+    "authorNationality": "United Kingdom",
+    "published": 1927,
+    "chosenBy": "Kyrre",
+    "pages": 224,
+    "numberInLine": 36,
+    "terningkastene": [
       { "medlem": "Levin", "terningkast": 0 },
       { "medlem": "Øivind", "terningkast": 0 },
       { "medlem": "Silje", "terningkast": 0 },
@@ -594,6 +611,6 @@
       { "medlem": "Heidi", "terningkast": 0 },
       { "medlem": "Kyrre", "terningkast": 0 }
     ],
-    "picture": "https://www.bokklubben.no/servlet/VisBildeServlet?produktId=20886761"
+    "picture": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTS4eSESxe6sW-JiDkM_10ZX8hfnPg5Y7H0kA&usqp=CAU"
   }
 ]
