@@ -604,6 +604,24 @@
     "pages": 224,
     "numberInLine": 36,
     "terningkastene": [
+      { "medlem": "Levin", "terningkast": 6 },
+      { "medlem": "Øivind", "terningkast": 6 },
+      { "medlem": "Silje", "terningkast": 2 },
+      { "medlem": "Ida", "terningkast": 2 },
+      { "medlem": "Heidi", "terningkast": 2 },
+      { "medlem": "Kyrre", "terningkast": 5 }
+    ],
+    "picture": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTS4eSESxe6sW-JiDkM_10ZX8hfnPg5Y7H0kA&usqp=CAU"
+  },
+  {
+    "title": "The Stars My Destination",
+    "author": "Alfred Bester",
+    "authorNationality": "US",
+    "published": 1955,
+    "chosenBy": "Øivind",
+    "pages": 234,
+    "numberInLine": 37,
+    "terningkastene": [
       { "medlem": "Levin", "terningkast": 0 },
       { "medlem": "Øivind", "terningkast": 0 },
       { "medlem": "Silje", "terningkast": 0 },
@@ -611,6 +629,6 @@
       { "medlem": "Heidi", "terningkast": 0 },
       { "medlem": "Kyrre", "terningkast": 0 }
     ],
-    "picture": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTS4eSESxe6sW-JiDkM_10ZX8hfnPg5Y7H0kA&usqp=CAU"
+    "picture": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1348002920l/11806617.jpg"
   }
 ]
