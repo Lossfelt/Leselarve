@@ -622,6 +622,42 @@
     "pages": 234,
     "numberInLine": 37,
     "terningkastene": [
+      { "medlem": "Levin", "terningkast": 6 },
+      { "medlem": "Øivind", "terningkast": 6 },
+      { "medlem": "Silje", "terningkast": 3 },
+      { "medlem": "Ida", "terningkast": 3 },
+      { "medlem": "Heidi", "terningkast": 4 },
+      { "medlem": "Kyrre", "terningkast": 3 }
+    ],
+    "picture": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1348002920l/11806617.jpg"
+  },
+  {
+    "title": "The Understory",
+    "author": "Pamela Erens",
+    "authorNationality": "US",
+    "published": 2007,
+    "chosenBy": "Silje",
+    "pages": 200,
+    "numberInLine": 38,
+    "terningkastene": [
+      { "medlem": "Levin", "terningkast": 4 },
+      { "medlem": "Øivind", "terningkast": 6 },
+      { "medlem": "Silje", "terningkast": 5 },
+      { "medlem": "Ida", "terningkast": 0 },
+      { "medlem": "Heidi", "terningkast": 3 },
+      { "medlem": "Kyrre", "terningkast": 4 }
+    ],
+    "picture": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1383048200l/18371508.jpg"
+  },
+  {
+    "title": "The Giver",
+    "author": "Lois Lowry",
+    "authorNationality": "US",
+    "published": 1993,
+    "chosenBy": "Levin",
+    "pages": 240,
+    "numberInLine": 39,
+    "terningkastene": [
       { "medlem": "Levin", "terningkast": 0 },
       { "medlem": "Øivind", "terningkast": 0 },
       { "medlem": "Silje", "terningkast": 0 },
@@ -629,6 +665,6 @@
       { "medlem": "Heidi", "terningkast": 0 },
       { "medlem": "Kyrre", "terningkast": 0 }
     ],
-    "picture": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1348002920l/11806617.jpg"
+    "picture": "https://www.norli.no/media/catalog/product/cache/d6342459236545b3c7cfa2efd266b66a/9/7/9780007263516.jpg"
   }
 ]
