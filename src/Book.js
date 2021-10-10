@@ -6,7 +6,7 @@ class Book extends React.Component {
 
     var gjennomsnittligTerningkast = 0;
     var terningkastListe = "";
-    book.terningkastene.forEach(element => {
+    book.terningkastene.forEach((element) => {
       gjennomsnittligTerningkast += element.terningkast;
       terningkastListe += element.medlem + " : " + element.terningkast + "\n";
     });
@@ -73,7 +73,6 @@ class Book extends React.Component {
             </tr>
           </tr>
         </table>
-        <hr />
       </div>
     );
   }

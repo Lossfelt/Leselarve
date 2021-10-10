@@ -37,7 +37,7 @@ class Presentation extends React.Component {
 
   render() {
     function compare(key, order = "asc") {
-      return function(a, b) {
+      return function (a, b) {
         if (!a.hasOwnProperty(key) || !b.hasOwnProperty(key)) {
           //property doesn't exist on either object
           return 0;
@@ -62,26 +62,24 @@ class Presentation extends React.Component {
     ) {
       var booksIntermediary = this.props.books;
       books = booksIntermediary.filter(
-        book => book.chosenBy === this.state.sortBy
+        (book) => book.chosenBy === this.state.sortBy
       );
     } else {
       books = this.props.books;
       books.sort(compare(this.state.sortBy, this.state.desc ? "desc" : "asc"));
     }
     const liste = [];
-    books.forEach(entry => {
+    books.forEach((entry) => {
       liste.push(
-        <tr>
-          <td>
-            <Book book={entry} />
-          </td>
-        </tr>
+        <div>
+          <Book book={entry} />
+        </div>
       );
     });
 
     var grafEllerBøker = "";
     if (this.state.grafEllerBøker === "Bøker") {
-      grafEllerBøker = <table className="center">{liste}</table>;
+      grafEllerBøker = <div className="flex-container">{liste}</div>;
     } else {
       grafEllerBøker = <Grafer books={this.props.books} />;
     }
