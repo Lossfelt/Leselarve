@@ -668,6 +668,40 @@
     "pages": 153,
     "numberInLine": 40,
     "terningkastene": [
+      { "medlem": "Levin", "terningkast": 5 },
+      { "medlem": "Øivind", "terningkast": 4 },
+      { "medlem": "Silje", "terningkast": 5 },
+      { "medlem": "Heidi", "terningkast": 5 },
+      { "medlem": "Kyrre", "terningkast": 2 }
+    ],
+    "picture": "https://i.imgur.com/XPhzlNY.jpg"
+  },
+  {
+    "title": "Lavterskeltilbud",
+    "author": "Jens M. Johansson",
+    "authorNationality": "SE",
+    "published": 2019,
+    "chosenBy": "Kyrre",
+    "pages": 336,
+    "numberInLine": 41,
+    "terningkastene": [
+      { "medlem": "Levin", "terningkast": 3 },
+      { "medlem": "Øivind", "terningkast": 4 },
+      { "medlem": "Silje", "terningkast": 5 },
+      { "medlem": "Heidi", "terningkast": 3 },
+      { "medlem": "Kyrre", "terningkast": 3 }
+    ],
+    "picture": "https://i.imgur.com/WE7FGzt.jpg"
+  },
+  {
+    "title": "Kvalmen",
+    "author": "Jean-paul Sartre",
+    "authorNationality": "FR",
+    "published": 1938,
+    "chosenBy": "Øivind",
+    "pages": 272,
+    "numberInLine": 42,
+    "terningkastene": [
       { "medlem": "Levin", "terningkast": 0 },
       { "medlem": "Øivind", "terningkast": 0 },
       { "medlem": "Silje", "terningkast": 0 },
@@ -675,6 +709,6 @@
       { "medlem": "Heidi", "terningkast": 0 },
       { "medlem": "Kyrre", "terningkast": 0 }
     ],
-    "picture": "https://i.imgur.com/XPhzlNY.jpg"
+    "picture": "https://i.imgur.com/vEBsPR8.jpg"
   }
 ]
