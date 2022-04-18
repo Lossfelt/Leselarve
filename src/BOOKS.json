@@ -702,6 +702,23 @@
     "pages": 272,
     "numberInLine": 42,
     "terningkastene": [
+      { "medlem": "Levin", "terningkast": 3 },
+      { "medlem": "Øivind", "terningkast": 5 },
+      { "medlem": "Silje", "terningkast": 3 },
+      { "medlem": "Heidi", "terningkast": 2 },
+      { "medlem": "Kyrre", "terningkast": 5 }
+    ],
+    "picture": "https://i.imgur.com/vEBsPR8.jpg"
+  },
+  {
+    "title": "Ein Lykkeleg Slutt",
+    "author": "Maren Uthaug",
+    "authorNationality": "Norway",
+    "published": 2019,
+    "chosenBy": "Silje",
+    "pages": 375,
+    "numberInLine": 43,
+    "terningkastene": [
       { "medlem": "Levin", "terningkast": 0 },
       { "medlem": "Øivind", "terningkast": 0 },
       { "medlem": "Silje", "terningkast": 0 },
@@ -709,6 +726,6 @@
       { "medlem": "Heidi", "terningkast": 0 },
       { "medlem": "Kyrre", "terningkast": 0 }
     ],
-    "picture": "https://i.imgur.com/vEBsPR8.jpg"
+    "picture": "https://i.imgur.com/oXN4Rzw.jpg"
   }
 ]
