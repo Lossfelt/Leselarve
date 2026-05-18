@@ -486,6 +486,68 @@ button {
   font-weight: 700;
 }
 
+/* ----------------------------- Statistics ----------------------------- */
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
+  gap: 20px;
+  padding-top: 24px;
+}
+
+.stat-card {
+  background: var(--bg-elev);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 20px 22px 16px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.stat-card--wide {
+  grid-column: 1 / -1;
+}
+
+.stat-card-header {
+  margin-bottom: 12px;
+}
+
+.stat-card-title {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin: 0 0 2px;
+  color: var(--text);
+}
+
+.stat-card-desc {
+  margin: 0;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.stat-card-body {
+  margin-left: -8px;
+}
+
+.stats-loading {
+  padding: 40px 0;
+  text-align: center;
+  color: var(--text-muted);
+  font-style: italic;
+}
+
+.geo-wrap {
+  width: 100%;
+  height: 380px;
+  background: #faf5e8;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.geo-wrap svg {
+  display: block;
+}
+
 /* ----------------------------- Responsive ----------------------------- */
 
 @media (max-width: 720px) {
@@ -520,6 +582,12 @@ button {
   }
   .modal-cover-wrap {
     padding: 20px;
+  }
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+  .stat-card {
+    padding: 16px 14px 12px;
   }
 }
 

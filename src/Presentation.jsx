@@ -1,9 +1,10 @@
-import { useMemo, useState } from "react";
+import { lazy, Suspense, useMemo, useState } from "react";
 import Header from "./components/Header.jsx";
 import Hero from "./components/Hero.jsx";
 import Bookshelf from "./components/Bookshelf.jsx";
 import BookDetail from "./components/BookDetail.jsx";
-import Grafer from "./Grafer.jsx";
+
+const Statistics = lazy(() => import("./components/Statistics.jsx"));
 
 function compare(key, order = "asc") {
   return (a, b) => {
@@ -75,7 +76,9 @@ export default function Presentation({ books }) {
         </>
       ) : (
         <main className="app-main">
-          <Grafer books={books} />
+          <Suspense fallback={<div className="stats-loading">Laster statistikk …</div>}>
+            <Statistics books={books} />
+          </Suspense>
         </main>
       )}
     </div>
