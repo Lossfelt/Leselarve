@@ -1,152 +1,531 @@
+:root {
+  --bg: #f5efe1;
+  --bg-elev: #faf5e8;
+  --border: #e6dcc6;
+  --text: #2c2419;
+  --text-muted: #6b6256;
+  --accent: #6b7a3a;
+  --accent-text: #ffffff;
+  --shadow-card: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
 body {
   margin: 0;
-  font-family: sans-serif;
-  background-color: #d6eeff;
+  padding: 0;
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
 }
 
-/*table, th, td {
-   border: 1px solid black;
-}*/
+button {
+  font-family: inherit;
+}
 
-.flex-container {
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.app-main {
+  flex: 1;
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 24px 48px;
+}
+
+/* ----------------------------- Header ----------------------------- */
+
+.app-header {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  padding: 18px 32px;
+  background: var(--bg-elev);
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.app-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.app-brand-mark {
+  width: 44px;
+  height: 44px;
+  object-fit: contain;
+}
+
+.app-brand-name {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.7rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+.app-nav {
+  display: flex;
+  gap: 4px;
+  margin-left: 12px;
+}
+
+.app-nav-link {
+  background: transparent;
+  border: none;
+  color: var(--text);
+  font-size: 1rem;
+  padding: 8px 16px;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.app-nav-link:hover {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+.app-nav-link.active {
+  font-weight: 600;
+  border-bottom: 2px solid var(--text);
+  border-radius: 0;
+  padding-bottom: 6px;
+}
+
+.app-search {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 8px 18px;
+  width: 100%;
+  max-width: 380px;
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+
+.app-search:focus-within {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(107, 122, 58, 0.15);
+}
+
+.app-search i {
+  color: var(--text-muted);
+}
+
+.app-search input {
+  flex: 1;
+  border: none;
+  background: transparent;
+  outline: none;
+  font-size: 0.95rem;
+  color: var(--text);
+}
+
+/* ----------------------------- Toolbar (filter + sort) ----------------------------- */
+
+.app-toolbar {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 24px 24px 16px;
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
 }
 
-.flex-container > div {
-  background-color: #bfe4ff;
-  margin: 10px;
-  width: 300px;
-  text-align: left;
-  border: 2px solid black;
-  border-radius: 5px;
+.chip-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
 }
 
-.topnav {
-  background-color: #333;
-  overflow: hidden;
+.chip {
+  background: var(--bg-elev);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 8px 16px;
+  font-size: 0.92rem;
+  color: var(--text);
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s, border-color 0.15s;
 }
 
-.button {
-  float: left;
-  display: block;
-  color: #f2f2f2;
-  background-color: #333;
-  text-align: center;
-  padding: 14px 16px;
-  font-size: 17px;
-  border: none;
-  outline: none;
+.chip:hover {
+  border-color: var(--accent);
 }
 
-.button:hover,
-.dropdown:hover .dropbtn {
-  background-color: #555;
-  color: white;
+.chip.active {
+  background: var(--accent);
+  color: var(--accent-text);
+  border-color: var(--accent);
 }
 
-.active {
-  background-color: #51b7ff;
-  color: white;
+.sort-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.9rem;
+  color: var(--text-muted);
 }
 
-.dropdown {
-  float: right;
-  overflow: hidden;
+.sort-label {
+  font-weight: 500;
 }
 
-.dropdown .dropbtn {
-  font-size: 17px;
-  border: none;
-  outline: none;
-  color: white;
-  padding: 14px 16px;
-  background-color: inherit;
+.sort-select {
+  background: var(--bg-elev);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 6px 10px;
+  font-size: 0.9rem;
+  color: var(--text);
+  cursor: pointer;
 }
 
-.dropdown .headerbtn {
-  font-size: 17px;
-  font-weight: bold;
-  border: none;
-  outline: none;
-  color: black;
-  padding: 14px 16px;
-  background-color: inherit;
+.sort-direction {
+  background: var(--bg-elev);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+  color: var(--text);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.dropdown-content-invisible {
-  display: none;
-  position: absolute;
-  background-color: #f9f9f9;
-  min-width: 160px;
-  max-width: 200px;
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-  z-index: 1;
+.sort-direction:hover {
+  border-color: var(--accent);
 }
 
-.dropdown-content-visible {
-  display: block;
-  position: absolute;
-  right: 0;
-  background-color: #f9f9f9;
-  min-width: 160px;
-  max-width: 200px;
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-  z-index: 1;
-}
+/* ----------------------------- Bookshelf ----------------------------- */
 
-.dropdown-content-visible .button {
-  color: black;
-  background-color: #f9f9f9;
-  display: block;
-  width: 100%;
-  padding-inline-start: 50px;
-  text-align: left;
-}
-
-.dropdown-content-visible .button:hover {
-  background-color: #ddd;
-}
-
-.dropdown-content-visible .active {
-  background-color: #51b7ff;
-  color: white;
-}
-
-.tooltip {
+.bookshelf {
   position: relative;
-  display: inline-block;
-  border-bottom: 1px dotted black; /* If you want dots under the hoverable text */
+  padding: 22px;
+  border-radius: 10px;
+  background: url("/wood-plank.svg") repeat;
+  background-size: 400px 60px;
+  box-shadow:
+    inset 0 0 0 1px rgba(0, 0, 0, 0.4),
+    inset 0 2px 0 rgba(255, 220, 170, 0.25),
+    0 30px 70px rgba(20, 12, 5, 0.4);
 }
 
-.tooltip .tooltiptext {
-  visibility: hidden;
-  width: 120px;
-  background-color: lightblue;
-  color: rgb(0, 0, 0);
+.bookshelf-empty {
+  padding: 80px 20px;
   text-align: center;
-  padding: 5px 0;
-  border-radius: 6px;
-  white-space: pre;
+  color: #e8d9b9;
+  font-style: italic;
+  background: url("/wood-back.svg") repeat;
+  background-size: 400px 400px;
+  border-radius: 4px;
+  box-shadow: inset 0 0 60px rgba(0, 0, 0, 0.7);
+}
 
-  /* Position the tooltip text  */
+.bookshelf-grid {
+  position: relative;
+  background: url("/wood-back.svg") repeat;
+  background-size: 400px 400px;
+  background-color: #2a1808;
+  border-radius: 4px;
+  box-shadow:
+    inset 0 0 80px rgba(0, 0, 0, 0.55),
+    inset 0 6px 14px -6px rgba(0, 0, 0, 0.95),
+    inset 0 -2px 4px rgba(0, 0, 0, 0.6);
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+  gap: 0;
+  overflow: hidden;
+}
+
+.shelf-cell {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 24px 14px 24px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: inherit;
+  min-height: 280px;
+}
+
+.shelf-cell:focus-visible {
+  outline: 2px solid rgba(255, 220, 170, 0.6);
+  outline-offset: -8px;
+  border-radius: 4px;
+}
+
+/* Top warm glow from LED strip under upper shelf */
+.shelf-glow {
   position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 70px;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 215, 140, 0.35) 0%,
+    rgba(255, 215, 140, 0.12) 40%,
+    rgba(255, 215, 140, 0) 100%
+  );
+  pointer-events: none;
+}
+
+/* Plank — the wooden shelf board, with realistic 3D shading */
+.shelf-plank {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 20px;
+  background:
+    linear-gradient(
+      180deg,
+      rgba(255, 225, 170, 0.55) 0%,
+      rgba(255, 225, 170, 0) 14%,
+      rgba(0, 0, 0, 0) 55%,
+      rgba(0, 0, 0, 0.55) 100%
+    ),
+    url("/wood-plank.svg") repeat;
+  background-size: auto, 400px 20px;
+  box-shadow:
+    0 1px 0 rgba(255, 220, 170, 0.35) inset,
+    0 6px 10px -2px rgba(0, 0, 0, 0.65);
+  pointer-events: none;
+}
+
+.book-on-shelf {
+  position: relative;
+  width: 100%;
+  max-width: 140px;
+  display: block;
   z-index: 1;
-  top: -200%;
-  left: 120%;
+  transition: transform 0.25s ease, filter 0.25s ease;
+  filter: drop-shadow(3px 6px 8px rgba(0, 0, 0, 0.7));
 }
 
-.tooltip .tooltiptext::after {
-  content: "";
+.shelf-cell:hover .book-on-shelf,
+.shelf-cell:focus-visible .book-on-shelf {
+  transform: translateY(-10px);
+  filter: drop-shadow(5px 14px 16px rgba(0, 0, 0, 0.75));
+}
+
+.book-cover {
+  width: 100%;
+  aspect-ratio: 2 / 3;
+  object-fit: cover;
+  display: block;
+  border-radius: 2px;
+  background: #222;
+}
+
+/* ----------------------------- Modal ----------------------------- */
+
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(20, 14, 6, 0.55);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+  padding: 20px;
+  animation: fade-in 0.15s ease;
+}
+
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.modal {
+  position: relative;
+  background: var(--bg-elev);
+  border-radius: 12px;
+  max-width: 720px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  gap: 0;
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.4);
+}
+
+.modal-close {
   position: absolute;
-  top: 50%;
-  right: 100%; /* To the left of the tooltip */
-  margin-top: -5px;
-  border-width: 5px;
-  border-style: solid;
-  border-color: transparent lightblue transparent transparent;
+  top: 8px;
+  right: 12px;
+  background: transparent;
+  border: none;
+  font-size: 1.8rem;
+  line-height: 1;
+  color: var(--text-muted);
+  cursor: pointer;
+  z-index: 1;
 }
 
-.tooltip:hover .tooltiptext {
-  visibility: visible;
+.modal-close:hover {
+  color: var(--text);
+}
+
+.modal-cover-wrap {
+  padding: 24px;
+  background: linear-gradient(180deg, #efe4cc, #d9cba7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-cover {
+  width: 100%;
+  max-width: 200px;
+  aspect-ratio: 2 / 3;
+  object-fit: cover;
+  border-radius: 3px;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+}
+
+.modal-body {
+  padding: 28px 28px 24px;
+}
+
+.modal-title {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.6rem;
+  margin: 0 0 4px;
+  letter-spacing: -0.01em;
+}
+
+.modal-author {
+  margin: 0 0 18px;
+  color: var(--text-muted);
+  font-style: italic;
+}
+
+.modal-facts {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+  gap: 12px;
+  margin: 0 0 22px;
+}
+
+.modal-facts > div {
+  background: var(--bg);
+  border-radius: 8px;
+  padding: 8px 12px;
+}
+
+.modal-facts dt {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-muted);
+  margin-bottom: 2px;
+}
+
+.modal-facts dd {
+  margin: 0;
+  font-weight: 600;
+}
+
+.dice-value {
+  font-weight: 700;
+}
+
+.modal-section-title {
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-muted);
+  margin: 0 0 8px;
+}
+
+.terningkast-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 6px;
+}
+
+.terningkast-list li {
+  display: flex;
+  justify-content: space-between;
+  background: var(--bg);
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 0.92rem;
+}
+
+.terningkast-value {
+  font-weight: 700;
+}
+
+/* ----------------------------- Responsive ----------------------------- */
+
+@media (max-width: 720px) {
+  .app-header {
+    flex-wrap: wrap;
+    gap: 12px;
+    padding: 14px 18px;
+  }
+  .app-search {
+    margin-left: 0;
+    order: 3;
+    max-width: 100%;
+  }
+  .app-toolbar {
+    padding: 18px 16px 12px;
+  }
+  .app-main {
+    padding: 0 16px 32px;
+  }
+  .bookshelf {
+    padding: 14px;
+  }
+  .bookshelf-grid {
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  }
+  .shelf-cell {
+    min-height: 230px;
+    padding: 18px 8px 20px;
+  }
+  .modal {
+    grid-template-columns: 1fr;
+  }
+  .modal-cover-wrap {
+    padding: 20px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .book-on-shelf,
+  .modal-backdrop {
+    transition: none;
+    animation: none;
+  }
 }

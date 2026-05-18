@@ -1,20 +1,20 @@
 {
   "name": "leselarve",
-  "version": "1.0.0",
-  "description": "Working on a site for my book club to show what books we've read.",
-  "keywords": [],
-  "main": "src/index.js",
-  "dependencies": {
-    "react": "16.8.6",
-    "react-dom": "16.8.6",
-    "react-google-charts": "3.0.15",
-    "react-scripts": "3.0.1"
-  },
-  "devDependencies": {},
+  "version": "2.0.0",
+  "description": "Bokklubb-side som viser bøkene vi har lest.",
+  "type": "module",
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "react-google-charts": "^5.2.1"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.3.4",
+    "vite": "^6.0.0"
   }
 }

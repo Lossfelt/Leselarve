@@ -1,43 +1,32 @@
 export function BokerPrLand(books) {
-  var data = [
-    ["Land", "Antall", { role: "tooltip", type: "string", p: { html: true } }]
-  ];
-
-  var landeneJegHarVærtGjennom = [];
-  var landeneOgAntall = [];
-
-  books.forEach(element => {
-    if (!landeneJegHarVærtGjennom.includes(element.authorNationality)) {
-      landeneJegHarVærtGjennom.push(element.authorNationality);
-      landeneOgAntall.push([
-        element.authorNationality,
-        1,
-        element.title + "<br>"
-      ]);
+  const perLand = new Map();
+  for (const book of books) {
+    const eksisterende = perLand.get(book.authorNationality);
+    if (eksisterende) {
+      eksisterende.antall += 1;
+      eksisterende.titler += `${book.title}<br>`;
     } else {
-      landeneOgAntall.forEach(entry => {
-        if (entry[0] === element.authorNationality) {
-          entry[1] += 1;
-          entry[2] += element.title + "<br>";
-        }
+      perLand.set(book.authorNationality, {
+        antall: 1,
+        titler: `${book.title}<br>`
       });
     }
-  });
+  }
 
-  landeneOgAntall.forEach(element => {
-    data.push(element);
-  });
-  //console.log(data);
-  var options = {
-    /* title: "Bøker pr land", */
+  const data = [
+    ["Land", "Antall", { role: "tooltip", type: "string", p: { html: true } }]
+  ];
+  for (const [land, { antall, titler }] of perLand) {
+    data.push([land, antall, titler]);
+  }
+
+  const options = {
     tooltip: { isHtml: true, trigger: "visible" },
     magnifyingGlass: { enable: true, zoomFactor: 5.0 },
     legend: { position: "none" },
     backgroundColor: "#d6eeff",
-    colorAxis: { colors: ["#61ceff", "#004c6d"] } // light blue to dark blue
+    colorAxis: { colors: ["#61ceff", "#004c6d"] }
   };
 
-  var begge = [data, options];
-
-  return begge;
+  return [data, options];
 }

@@ -1,10 +1,10 @@
 export function BokerPrAarstall(books) {
-  var data = [["Bøker", "Utgivelsesår"]];
-  books.forEach(element => {
-    data.push([element.title, element.published]);
-  });
+  const data = [["Bøker", "Utgivelsesår"]];
+  for (const book of books) {
+    data.push([book.title, book.published]);
+  }
 
-  var options = {
+  const options = {
     title: "Bøker lest per utgivelsestiår",
     legend: { position: "none" },
     backgroundColor: "#d6eeff",
@@ -12,7 +12,5 @@ export function BokerPrAarstall(books) {
     hAxis: { format: 0 }
   };
 
-  var begge = [data, options];
-
-  return begge;
+  return [data, options];
 }

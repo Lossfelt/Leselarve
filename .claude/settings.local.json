@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(rm \"public/index.html\")",
+      "Bash(rmdir public *)",
+      "Bash(rm \"src/index.js\")"
+    ]
+  }
+}
