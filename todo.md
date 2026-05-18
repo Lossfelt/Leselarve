@@ -13,10 +13,12 @@
 ## Fase 3 — Visuell redesign: bokhylle ✅
 
 Gjenstår som valgfri polish:
+
 - [ ] Dekor (plante, klode, småbøker) — venter på assets
 - [ ] Sentrering av siste rad / dekor i tomme celler
 
 ### Backlog (forsøkt / forkastet)
+
 - Sidevanger med Asset 4: prøvd som CSS-pseudo-elementer (vertikale stolper med skygge på bakveggen). Resultat ble unaturlig. Kan vurderes igjen senere med annen asset eller annen tilnærming (f.eks. faktiske vinklede sidekanter via SVG, eller integrert i et helt nytt sammensatt asset).
 
 ## Fase 4 — Polering
@@ -46,3 +48,4 @@ Gjenstår som valgfri polish:
 ## Til slutt
 
 - [ ] Funksjon for å legge til ny bok (skjema). I dag oppdateres BOOKS.json manuelt og bilde hentes ekstern. Vurder om en innebygd flyt er verdt det, eller om manuell prosess fortsatt er greit.
+- [ ] Noe som må gjøres for at Netlify skal greie å publisere endringen, nå som vi har byttet fra gammel standard til moderne Vite?
