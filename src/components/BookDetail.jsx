@@ -1,13 +1,80 @@
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
+
+const FOCUSABLE = [
+  "a[href]",
+  "button:not([disabled])",
+  "input:not([disabled])",
+  "select:not([disabled])",
+  "textarea:not([disabled])",
+  '[tabindex]:not([tabindex="-1"])'
+].join(",");
 
 export default function BookDetail({ book, onClose }) {
+  const modalRef = useRef(null);
+  const previousFocus = useRef(null);
+
+  // On open: remember who opened us, move focus into the modal, lock body scroll.
+  // On close: restore focus and scroll.
   useEffect(() => {
-    const handleKey = (e) => {
-      if (e.key === "Escape") onClose();
+    if (!book) return;
+
+    previousFocus.current = document.activeElement;
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+
+    // Focus the close button (first focusable) so Esc and Tab work immediately
+    const focusables = modalRef.current?.querySelectorAll(FOCUSABLE);
+    if (focusables && focusables.length) {
+      focusables[0].focus();
+    } else {
+      modalRef.current?.focus();
+    }
+
+    return () => {
+      document.body.style.overflow = previousOverflow;
+      // Return focus to whatever was focused before the modal opened
+      if (previousFocus.current && typeof previousFocus.current.focus === "function") {
+        previousFocus.current.focus();
+      }
     };
+  }, [book]);
+
+  // Esc to close + Tab focus-trap inside the modal
+  useEffect(() => {
+    if (!book) return;
+
+    const handleKey = (e) => {
+      if (e.key === "Escape") {
+        e.preventDefault();
+        onClose();
+        return;
+      }
+      if (e.key !== "Tab") return;
+
+      const focusables = modalRef.current?.querySelectorAll(FOCUSABLE);
+      if (!focusables || focusables.length === 0) {
+        e.preventDefault();
+        return;
+      }
+      const first = focusables[0];
+      const last = focusables[focusables.length - 1];
+
+      if (e.shiftKey) {
+        if (document.activeElement === first || !modalRef.current.contains(document.activeElement)) {
+          e.preventDefault();
+          last.focus();
+        }
+      } else {
+        if (document.activeElement === last || !modalRef.current.contains(document.activeElement)) {
+          e.preventDefault();
+          first.focus();
+        }
+      }
+    };
+
     window.addEventListener("keydown", handleKey);
     return () => window.removeEventListener("keydown", handleKey);
-  }, [onClose]);
+  }, [book, onClose]);
 
   if (!book) return null;
 
@@ -17,10 +84,12 @@ export default function BookDetail({ book, onClose }) {
   return (
     <div className="modal-backdrop" onClick={onClose}>
       <div
+        ref={modalRef}
         className="modal"
         role="dialog"
         aria-modal="true"
         aria-labelledby="modal-title"
+        tabIndex={-1}
         onClick={(e) => e.stopPropagation()}
       >
         <button className="modal-close" onClick={onClose} aria-label="Lukk">
