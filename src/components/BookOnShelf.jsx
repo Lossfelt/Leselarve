@@ -1,7 +1,6 @@
 export default function BookOnShelf({ book, onClick }) {
   return (
     <button className="shelf-cell" onClick={() => onClick(book)}>
-      <span className="shelf-glow" aria-hidden="true" />
       <span className="book-on-shelf">
         <img
           className="book-cover"
@@ -10,7 +9,6 @@ export default function BookOnShelf({ book, onClick }) {
           loading="lazy"
         />
       </span>
-      <span className="shelf-plank" aria-hidden="true" />
     </button>
   );
 }

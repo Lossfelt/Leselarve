@@ -2,7 +2,7 @@ export default function Header({ view, onViewChange, search, onSearchChange }) {
   return (
     <header className="app-header">
       <div className="app-brand">
-        <img className="app-brand-mark" src="/bookworm.svg" alt="" />
+        <img className="app-brand-mark" src="/Leselarve_ikon.png" alt="" />
         <span className="app-brand-name">Leselarve</span>
       </div>
       <nav className="app-nav">
