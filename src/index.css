@@ -19,7 +19,12 @@ body {
   padding: 0;
   background-color: var(--bg);
   color: var(--text);
-  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+  font-family:
+    "Inter",
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
     sans-serif;
   font-size: 16px;
   line-height: 1.5;
@@ -115,7 +120,9 @@ button {
   padding: 8px 18px;
   width: 100%;
   max-width: 380px;
-  transition: border-color 0.15s, box-shadow 0.15s;
+  transition:
+    border-color 0.15s,
+    box-shadow 0.15s;
 }
 
 .app-search:focus-within {
@@ -164,7 +171,10 @@ button {
   font-size: 0.92rem;
   color: var(--text);
   cursor: pointer;
-  transition: background 0.15s, color 0.15s, border-color 0.15s;
+  transition:
+    background 0.15s,
+    color 0.15s,
+    border-color 0.15s;
 }
 
 .chip:hover {
@@ -228,17 +238,14 @@ button {
     /* outer drop shadow — bookshelf lifted off the page */
     0 35px 80px rgba(20, 12, 5, 0.5),
     0 6px 14px rgba(20, 12, 5, 0.35),
-    /* frame top-edge highlight (catches light from above) */
-    inset 0 3px 0 rgba(255, 225, 175, 0.45),
+    /* frame top-edge highlight (catches light from above) */ inset 0 3px 0
+      rgba(255, 225, 175, 0.45),
     inset 0 8px 14px -6px rgba(255, 225, 175, 0.18),
-    /* frame side highlights (subtle) */
-    inset 3px 0 0 rgba(255, 225, 175, 0.18),
+    /* frame side highlights (subtle) */ inset 3px 0 0 rgba(255, 225, 175, 0.18),
     inset -3px 0 0 rgba(0, 0, 0, 0.35),
-    /* frame bottom-edge in deep shadow */
-    inset 0 -4px 0 rgba(0, 0, 0, 0.55),
+    /* frame bottom-edge in deep shadow */ inset 0 -4px 0 rgba(0, 0, 0, 0.55),
     inset 0 -10px 16px -8px rgba(0, 0, 0, 0.5),
-    /* outermost dark border for definition */
-    inset 0 0 0 1px rgba(0, 0, 0, 0.45);
+    /* outermost dark border for definition */ inset 0 0 0 1px rgba(0, 0, 0, 0.45);
 }
 
 .bookshelf-empty {
@@ -257,28 +264,28 @@ button {
   background:
     /* warm pool of light just above each plank, simulating cast LED light */
     radial-gradient(
-      ellipse 65% 50px at 50% 245px,
-      rgba(255, 195, 120, 0.18),
-      rgba(255, 195, 120, 0) 75%
-    ) 0 0 / 100% 290px repeat-y,
+        ellipse 65% 50px at 50% 245px,
+        rgba(255, 195, 120, 0.18),
+        rgba(255, 195, 120, 0) 75%
+      )
+      0 0 / 100% 290px repeat-y,
     /* plank with LED lights, positioned at bottom of each row */
     url("/Bokhylle_asset_3.png") 0 161px / 100% 290px repeat,
-    /* back wall */
-    url("/Bokhylle_asset_1.png") 0 0 / 1100px 1100px repeat;
+    /* back wall */ url("/Bokhylle_asset_1.png") 0 0 / 1100px 1100px repeat;
   background-color: #2a1808;
   border-radius: 4px;
   box-shadow:
     /* strong top shadow — cast by the underside of the frame top edge */
     inset 0 14px 22px -8px rgba(0, 0, 0, 0.95),
-    /* side shadows — cast by frame's inner sides */
-    inset 14px 0 22px -12px rgba(0, 0, 0, 0.85),
+    /* side shadows — cast by frame's inner sides */ inset 14px 0 22px -12px
+      rgba(0, 0, 0, 0.85),
     inset -14px 0 22px -12px rgba(0, 0, 0, 0.85),
-    /* bottom shadow — cast by frame's inner bottom edge */
-    inset 0 -10px 16px -6px rgba(0, 0, 0, 0.8),
-    /* overall vignette so the back wall feels dimmer than the frame */
-    inset 0 0 100px rgba(0, 0, 0, 0.5),
-    /* hard inner edge defining the recessed boundary */
-    inset 0 0 0 1px rgba(0, 0, 0, 0.7);
+    /* bottom shadow — cast by frame's inner bottom edge */ inset 0 -10px 16px -6px
+      rgba(0, 0, 0, 0.8),
+    /* overall vignette so the back wall feels dimmer than the frame */ inset 0 0 100px
+      rgba(0, 0, 0, 0.5),
+    /* hard inner edge defining the recessed boundary */ inset 0 0 0 1px
+      rgba(0, 0, 0, 0.7);
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
   grid-auto-rows: 290px;
@@ -323,7 +330,9 @@ button {
   max-width: 140px;
   display: block;
   z-index: 1;
-  transition: transform 0.25s ease, filter 0.25s ease;
+  transition:
+    transform 0.25s ease,
+    filter 0.25s ease;
   filter: drop-shadow(3px 6px 8px rgba(0, 0, 0, 0.7));
 }
 
@@ -357,8 +366,12 @@ button {
 }
 
 @keyframes fade-in {
-  from { opacity: 0; }
-  to { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 .modal {

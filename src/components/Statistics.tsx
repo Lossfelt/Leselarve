@@ -1,4 +1,4 @@
-import { useMemo } from "react";
+import { useMemo, type ReactNode } from "react";
 import {
   BarChart,
   Bar,
@@ -13,6 +13,7 @@ import {
   ComposedChart
 } from "recharts";
 import { ComposableMap, Geographies, Geography } from "react-simple-maps";
+import type { Book } from "../types.ts";
 
 const PALETTE = {
   olive: "#6b7a3a",
@@ -24,18 +25,18 @@ const PALETTE = {
   text: "#2c2419",
   muted: "#6b6256",
   grid: "#e6dcc6"
-};
+} as const;
 
 // Colors for dice ratings 1..6 — chosen to be distinct so the
 // distribution shape per member is easy to read.
 const DICE_COLORS = [
-  "#c46a5e", // 1 — warm red
-  "#d49f5a", // 2 — gold/orange
-  "#b8b045", // 3 — yellow-olive
-  "#6b9b54", // 4 — green
-  "#7a5a9b", // 5 — purple
-  "#5a8aa8"  // 6 — blue
-];
+  "#c46a5e",
+  "#d49f5a",
+  "#b8b045",
+  "#6b9b54",
+  "#7a5a9b",
+  "#5a8aa8"
+] as const;
 
 const tooltipStyle = {
   background: "#faf5e8",
@@ -45,18 +46,19 @@ const tooltipStyle = {
   fontSize: 13,
   color: PALETTE.text,
   boxShadow: "0 4px 12px rgba(0,0,0,0.1)"
-};
+} as const;
 
 // Map book-data country names to TopoJSON country names where they differ
-const COUNTRY_NAME_FIX = {
+const COUNTRY_NAME_FIX: Record<string, string> = {
   US: "United States of America"
 };
 
-const GEO_URL =
-  "https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json";
+const GEO_URL = "https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json";
 
-function avgPagesPerMember(books) {
-  const acc = new Map();
+type NamedValue = { name: string; verdi: number };
+
+function avgPagesPerMember(books: Book[]): NamedValue[] {
+  const acc = new Map<string, { sider: number; antall: number }>();
   for (const b of books) {
     const m = acc.get(b.chosenBy) ?? { sider: 0, antall: 0 };
     m.sider += b.pages;
@@ -71,8 +73,8 @@ function avgPagesPerMember(books) {
     .sort((a, b) => b.verdi - a.verdi);
 }
 
-function booksByDecade(books) {
-  const acc = new Map();
+function booksByDecade(books: Book[]): NamedValue[] {
+  const acc = new Map<number, number>();
   for (const b of books) {
     const decade = Math.floor(b.published / 10) * 10;
     acc.set(decade, (acc.get(decade) ?? 0) + 1);
@@ -80,29 +82,53 @@ function booksByDecade(books) {
   const decades = [...acc.keys()].sort((a, b) => a - b);
   const min = decades[0];
   const max = decades[decades.length - 1];
-  const out = [];
+  const out: NamedValue[] = [];
   for (let d = min; d <= max; d += 10) {
     out.push({ name: `${d}-tallet`, verdi: acc.get(d) ?? 0 });
   }
   return out;
 }
 
-// Returns rows shaped for a grouped bar chart:
-// one row per member with keys "1".."6" holding counts.
-function diceDistributionPerMember(books) {
-  const acc = new Map();
+type DiceRow = {
+  name: string;
+  1: number;
+  2: number;
+  3: number;
+  4: number;
+  5: number;
+  6: number;
+};
+
+function diceDistributionPerMember(books: Book[]): DiceRow[] {
+  const acc = new Map<string, DiceRow>();
   for (const book of books) {
     for (const t of book.terningkastene) {
       if (t.terningkast < 1 || t.terningkast > 6) continue;
-      const row = acc.get(t.medlem) ?? { name: t.medlem, 1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 0 };
-      row[t.terningkast] += 1;
+      const row = acc.get(t.medlem) ?? {
+        name: t.medlem,
+        1: 0,
+        2: 0,
+        3: 0,
+        4: 0,
+        5: 0,
+        6: 0
+      };
+      row[t.terningkast as 1 | 2 | 3 | 4 | 5 | 6] += 1;
       acc.set(t.medlem, row);
     }
   }
   return [...acc.values()].sort((a, b) => a.name.localeCompare(b.name));
 }
 
-function ratingsPerBook(books) {
+type RatingRow = {
+  name: string;
+  snitt: number;
+  min: number;
+  max: number;
+  range: [number, number];
+};
+
+function ratingsPerBook(books: Book[]): RatingRow[] {
   return books.map((b) => {
     const cast = b.terningkastene.map((t) => t.terningkast);
     const snitt = cast.reduce((s, t) => s + t, 0) / cast.length;
@@ -116,8 +142,8 @@ function ratingsPerBook(books) {
   });
 }
 
-function booksByCountry(books) {
-  const acc = new Map();
+function booksByCountry(books: Book[]): NamedValue[] {
+  const acc = new Map<string, number>();
   for (const b of books) {
     const c = b.authorNationality || "Ukjent";
     acc.set(c, (acc.get(c) ?? 0) + 1);
@@ -127,7 +153,14 @@ function booksByCountry(books) {
     .sort((a, b) => b.verdi - a.verdi);
 }
 
-function ChartCard({ title, description, children, wide }) {
+type ChartCardProps = {
+  title: string;
+  description?: string;
+  wide?: boolean;
+  children: ReactNode;
+};
+
+function ChartCard({ title, description, children, wide }: ChartCardProps) {
   return (
     <section className={`stat-card${wide ? " stat-card--wide" : ""}`}>
       <header className="stat-card-header">
@@ -139,10 +172,9 @@ function ChartCard({ title, description, children, wide }) {
   );
 }
 
-function BooksMap({ countries }) {
-  // Build a lookup keyed by TopoJSON-style country name
+function BooksMap({ countries }: { countries: NamedValue[] }) {
   const counts = useMemo(() => {
-    const out = {};
+    const out: Record<string, number> = {};
     for (const { name, verdi } of countries) {
       const key = COUNTRY_NAME_FIX[name] ?? name;
       out[key] = verdi;
@@ -152,10 +184,9 @@ function BooksMap({ countries }) {
 
   const maxCount = Math.max(1, ...countries.map((c) => c.verdi));
 
-  const colorFor = (count) => {
+  const colorFor = (count: number): string => {
     if (!count) return "#f0e8d4";
     const t = count / maxCount;
-    // Interpolate from light olive to dark olive based on count
     const r = Math.round(232 - (232 - 107) * t);
     const g = Math.round(228 - (228 - 122) * t);
     const b = Math.round(180 - (180 - 58) * t);
@@ -200,7 +231,11 @@ function BooksMap({ countries }) {
   );
 }
 
-export default function Statistics({ books }) {
+type Props = {
+  books: Book[];
+};
+
+export default function Statistics({ books }: Props) {
   const pages = useMemo(() => avgPagesPerMember(books), [books]);
   const decades = useMemo(() => booksByDecade(books), [books]);
   const dice = useMemo(() => diceDistributionPerMember(books), [books]);
@@ -216,10 +251,27 @@ export default function Statistics({ books }) {
         <ResponsiveContainer width="100%" height={260}>
           <BarChart data={pages} margin={{ top: 10, right: 16, bottom: 10, left: 0 }}>
             <CartesianGrid stroke={PALETTE.grid} vertical={false} />
-            <XAxis dataKey="name" tick={{ fill: PALETTE.muted, fontSize: 12 }} axisLine={{ stroke: PALETTE.grid }} tickLine={false} />
-            <YAxis tick={{ fill: PALETTE.muted, fontSize: 12 }} axisLine={{ stroke: PALETTE.grid }} tickLine={false} />
-            <Tooltip contentStyle={tooltipStyle} cursor={{ fill: "rgba(107,122,58,0.08)" }} />
-            <Bar dataKey="verdi" name="Sider" fill={PALETTE.olive} radius={[4, 4, 0, 0]} />
+            <XAxis
+              dataKey="name"
+              tick={{ fill: PALETTE.muted, fontSize: 12 }}
+              axisLine={{ stroke: PALETTE.grid }}
+              tickLine={false}
+            />
+            <YAxis
+              tick={{ fill: PALETTE.muted, fontSize: 12 }}
+              axisLine={{ stroke: PALETTE.grid }}
+              tickLine={false}
+            />
+            <Tooltip
+              contentStyle={tooltipStyle}
+              cursor={{ fill: "rgba(107,122,58,0.08)" }}
+            />
+            <Bar
+              dataKey="verdi"
+              name="Sider"
+              fill={PALETTE.olive}
+              radius={[4, 4, 0, 0]}
+            />
           </BarChart>
         </ResponsiveContainer>
       </ChartCard>
@@ -228,10 +280,28 @@ export default function Statistics({ books }) {
         <ResponsiveContainer width="100%" height={260}>
           <BarChart data={decades} margin={{ top: 10, right: 16, bottom: 10, left: 0 }}>
             <CartesianGrid stroke={PALETTE.grid} vertical={false} />
-            <XAxis dataKey="name" tick={{ fill: PALETTE.muted, fontSize: 11 }} axisLine={{ stroke: PALETTE.grid }} tickLine={false} />
-            <YAxis allowDecimals={false} tick={{ fill: PALETTE.muted, fontSize: 12 }} axisLine={{ stroke: PALETTE.grid }} tickLine={false} />
-            <Tooltip contentStyle={tooltipStyle} cursor={{ fill: "rgba(107,122,58,0.08)" }} />
-            <Bar dataKey="verdi" name="Bøker" fill={PALETTE.brown} radius={[4, 4, 0, 0]} />
+            <XAxis
+              dataKey="name"
+              tick={{ fill: PALETTE.muted, fontSize: 11 }}
+              axisLine={{ stroke: PALETTE.grid }}
+              tickLine={false}
+            />
+            <YAxis
+              allowDecimals={false}
+              tick={{ fill: PALETTE.muted, fontSize: 12 }}
+              axisLine={{ stroke: PALETTE.grid }}
+              tickLine={false}
+            />
+            <Tooltip
+              contentStyle={tooltipStyle}
+              cursor={{ fill: "rgba(107,122,58,0.08)" }}
+            />
+            <Bar
+              dataKey="verdi"
+              name="Bøker"
+              fill={PALETTE.brown}
+              radius={[4, 4, 0, 0]}
+            />
           </BarChart>
         </ResponsiveContainer>
       </ChartCard>
@@ -242,14 +312,37 @@ export default function Statistics({ books }) {
         wide
       >
         <ResponsiveContainer width="100%" height={320}>
-          <BarChart data={dice} margin={{ top: 10, right: 24, bottom: 10, left: 0 }} barCategoryGap="18%">
+          <BarChart
+            data={dice}
+            margin={{ top: 10, right: 24, bottom: 10, left: 0 }}
+            barCategoryGap="18%"
+          >
             <CartesianGrid stroke={PALETTE.grid} vertical={false} />
-            <XAxis dataKey="name" tick={{ fill: PALETTE.muted, fontSize: 12 }} axisLine={{ stroke: PALETTE.grid }} tickLine={false} />
-            <YAxis allowDecimals={false} tick={{ fill: PALETTE.muted, fontSize: 12 }} axisLine={{ stroke: PALETTE.grid }} tickLine={false} />
-            <Tooltip contentStyle={tooltipStyle} cursor={{ fill: "rgba(107,122,58,0.06)" }} />
+            <XAxis
+              dataKey="name"
+              tick={{ fill: PALETTE.muted, fontSize: 12 }}
+              axisLine={{ stroke: PALETTE.grid }}
+              tickLine={false}
+            />
+            <YAxis
+              allowDecimals={false}
+              tick={{ fill: PALETTE.muted, fontSize: 12 }}
+              axisLine={{ stroke: PALETTE.grid }}
+              tickLine={false}
+            />
+            <Tooltip
+              contentStyle={tooltipStyle}
+              cursor={{ fill: "rgba(107,122,58,0.06)" }}
+            />
             <Legend wrapperStyle={{ fontSize: 12, color: PALETTE.muted }} />
             {[1, 2, 3, 4, 5, 6].map((d) => (
-              <Bar key={d} dataKey={d} name={`${d}er`} fill={DICE_COLORS[d - 1]} radius={[3, 3, 0, 0]} />
+              <Bar
+                key={d}
+                dataKey={d}
+                name={`${d}er`}
+                fill={DICE_COLORS[d - 1]}
+                radius={[3, 3, 0, 0]}
+              />
             ))}
           </BarChart>
         </ResponsiveContainer>
@@ -266,13 +359,41 @@ export default function Statistics({ books }) {
         title="Bøker per land — rangering"
         description="Forfatterens nasjonalitet"
       >
-        <ResponsiveContainer width="100%" height={Math.max(220, countries.length * 24 + 40)}>
-          <BarChart data={countries} layout="vertical" margin={{ top: 10, right: 16, bottom: 10, left: 0 }}>
+        <ResponsiveContainer
+          width="100%"
+          height={Math.max(220, countries.length * 24 + 40)}
+        >
+          <BarChart
+            data={countries}
+            layout="vertical"
+            margin={{ top: 10, right: 16, bottom: 10, left: 0 }}
+          >
             <CartesianGrid stroke={PALETTE.grid} horizontal={false} />
-            <XAxis type="number" allowDecimals={false} tick={{ fill: PALETTE.muted, fontSize: 12 }} axisLine={{ stroke: PALETTE.grid }} tickLine={false} />
-            <YAxis type="category" dataKey="name" width={120} tick={{ fill: PALETTE.muted, fontSize: 12 }} axisLine={{ stroke: PALETTE.grid }} tickLine={false} />
-            <Tooltip contentStyle={tooltipStyle} cursor={{ fill: "rgba(107,122,58,0.08)" }} />
-            <Bar dataKey="verdi" name="Bøker" fill={PALETTE.terracotta} radius={[0, 4, 4, 0]} />
+            <XAxis
+              type="number"
+              allowDecimals={false}
+              tick={{ fill: PALETTE.muted, fontSize: 12 }}
+              axisLine={{ stroke: PALETTE.grid }}
+              tickLine={false}
+            />
+            <YAxis
+              type="category"
+              dataKey="name"
+              width={120}
+              tick={{ fill: PALETTE.muted, fontSize: 12 }}
+              axisLine={{ stroke: PALETTE.grid }}
+              tickLine={false}
+            />
+            <Tooltip
+              contentStyle={tooltipStyle}
+              cursor={{ fill: "rgba(107,122,58,0.08)" }}
+            />
+            <Bar
+              dataKey="verdi"
+              name="Bøker"
+              fill={PALETTE.terracotta}
+              radius={[0, 4, 4, 0]}
+            />
           </BarChart>
         </ResponsiveContainer>
       </ChartCard>
@@ -283,7 +404,10 @@ export default function Statistics({ books }) {
         wide
       >
         <ResponsiveContainer width="100%" height={320}>
-          <ComposedChart data={ratings} margin={{ top: 10, right: 16, bottom: 70, left: 0 }}>
+          <ComposedChart
+            data={ratings}
+            margin={{ top: 10, right: 16, bottom: 70, left: 0 }}
+          >
             <CartesianGrid stroke={PALETTE.grid} vertical={false} />
             <XAxis
               dataKey="name"
@@ -295,8 +419,17 @@ export default function Statistics({ books }) {
               interval={0}
               height={60}
             />
-            <YAxis domain={[0.5, 6.5]} ticks={[1, 2, 3, 4, 5, 6]} tick={{ fill: PALETTE.muted, fontSize: 12 }} axisLine={{ stroke: PALETTE.grid }} tickLine={false} />
-            <Tooltip contentStyle={tooltipStyle} cursor={{ stroke: PALETTE.olive, strokeDasharray: 3 }} />
+            <YAxis
+              domain={[0.5, 6.5]}
+              ticks={[1, 2, 3, 4, 5, 6]}
+              tick={{ fill: PALETTE.muted, fontSize: 12 }}
+              axisLine={{ stroke: PALETTE.grid }}
+              tickLine={false}
+            />
+            <Tooltip
+              contentStyle={tooltipStyle}
+              cursor={{ stroke: PALETTE.olive, strokeDasharray: 3 }}
+            />
             <Area
               type="monotone"
               dataKey="range"

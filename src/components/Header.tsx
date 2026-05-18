@@ -1,4 +1,13 @@
-export default function Header({ view, onViewChange, search, onSearchChange }) {
+import type { View } from "../types.ts";
+
+type Props = {
+  view: View;
+  onViewChange: (next: View) => void;
+  search: string;
+  onSearchChange: (next: string) => void;
+};
+
+export default function Header({ view, onViewChange, search, onSearchChange }: Props) {
   return (
     <header className="app-header">
       <div className="app-brand">

@@ -1,6 +1,12 @@
-import BookOnShelf from "./BookOnShelf.jsx";
+import BookOnShelf from "./BookOnShelf.tsx";
+import type { Book } from "../types.ts";
 
-export default function Bookshelf({ books, onBookSelect }) {
+type Props = {
+  books: Book[];
+  onBookSelect: (book: Book) => void;
+};
+
+export default function Bookshelf({ books, onBookSelect }: Props) {
   if (books.length === 0) {
     return (
       <div className="bookshelf">
@@ -13,11 +19,7 @@ export default function Bookshelf({ books, onBookSelect }) {
     <div className="bookshelf">
       <div className="bookshelf-grid">
         {books.map((book) => (
-          <BookOnShelf
-            key={book.numberInLine}
-            book={book}
-            onClick={onBookSelect}
-          />
+          <BookOnShelf key={book.numberInLine} book={book} onClick={onBookSelect} />
         ))}
       </div>
     </div>

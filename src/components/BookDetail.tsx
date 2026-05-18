@@ -1,4 +1,5 @@
 import { useEffect, useRef } from "react";
+import type { Book } from "../types.ts";
 
 const FOCUSABLE = [
   "a[href]",
@@ -9,22 +10,26 @@ const FOCUSABLE = [
   '[tabindex]:not([tabindex="-1"])'
 ].join(",");
 
-export default function BookDetail({ book, onClose }) {
-  const modalRef = useRef(null);
-  const previousFocus = useRef(null);
+type Props = {
+  book: Book | null;
+  onClose: () => void;
+};
+
+export default function BookDetail({ book, onClose }: Props) {
+  const modalRef = useRef<HTMLDivElement>(null);
+  const previousFocus = useRef<HTMLElement | null>(null);
 
   // On open: remember who opened us, move focus into the modal, lock body scroll.
   // On close: restore focus and scroll.
   useEffect(() => {
     if (!book) return;
 
-    previousFocus.current = document.activeElement;
+    previousFocus.current = document.activeElement as HTMLElement | null;
     const previousOverflow = document.body.style.overflow;
     document.body.style.overflow = "hidden";
 
-    // Focus the close button (first focusable) so Esc and Tab work immediately
-    const focusables = modalRef.current?.querySelectorAll(FOCUSABLE);
-    if (focusables && focusables.length) {
+    const focusables = modalRef.current?.querySelectorAll<HTMLElement>(FOCUSABLE);
+    if (focusables && focusables.length > 0) {
       focusables[0].focus();
     } else {
       modalRef.current?.focus();
@@ -32,7 +37,6 @@ export default function BookDetail({ book, onClose }) {
 
     return () => {
       document.body.style.overflow = previousOverflow;
-      // Return focus to whatever was focused before the modal opened
       if (previousFocus.current && typeof previousFocus.current.focus === "function") {
         previousFocus.current.focus();
       }
@@ -43,7 +47,7 @@ export default function BookDetail({ book, onClose }) {
   useEffect(() => {
     if (!book) return;
 
-    const handleKey = (e) => {
+    const handleKey = (e: KeyboardEvent) => {
       if (e.key === "Escape") {
         e.preventDefault();
         onClose();
@@ -51,21 +55,22 @@ export default function BookDetail({ book, onClose }) {
       }
       if (e.key !== "Tab") return;
 
-      const focusables = modalRef.current?.querySelectorAll(FOCUSABLE);
+      const focusables = modalRef.current?.querySelectorAll<HTMLElement>(FOCUSABLE);
       if (!focusables || focusables.length === 0) {
         e.preventDefault();
         return;
       }
       const first = focusables[0];
       const last = focusables[focusables.length - 1];
+      const active = document.activeElement;
 
       if (e.shiftKey) {
-        if (document.activeElement === first || !modalRef.current.contains(document.activeElement)) {
+        if (active === first || !modalRef.current?.contains(active)) {
           e.preventDefault();
           last.focus();
         }
       } else {
-        if (document.activeElement === last || !modalRef.current.contains(document.activeElement)) {
+        if (active === last || !modalRef.current?.contains(active)) {
           e.preventDefault();
           first.focus();
         }
@@ -103,7 +108,9 @@ export default function BookDetail({ book, onClose }) {
           />
         </div>
         <div className="modal-body">
-          <h2 id="modal-title" className="modal-title">{book.title}</h2>
+          <h2 id="modal-title" className="modal-title">
+            {book.title}
+          </h2>
           <p className="modal-author">{book.author}</p>
           <dl className="modal-facts">
             <div>
