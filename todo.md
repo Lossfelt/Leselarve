@@ -44,5 +44,6 @@
 
 ## Til slutt
 
-- [ ] Funksjon for å legge til ny bok (skjema). I dag oppdateres BOOKS.json manuelt og bilde hentes ekstern. Vurder om en innebygd flyt er verdt det, eller om manuell prosess fortsatt er greit.
-- [ ] Noe som må gjøres for at Netlify skal greie å publisere endringen, nå som vi har byttet fra gammel standard til moderne Vite?
+- [ ] Be Claude hente bildene fra Imgur og lagre den som en del av repoet isteden.
+
+
