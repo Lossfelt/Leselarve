@@ -26,7 +26,7 @@
 - [x] Font Awesome konsolidert
 - [x] Favicon med bokorm
 - [x] `prefers-reduced-motion`
-- [ ] **Modal-tilgjengelighet**: Esc lukker, focus-trap, returnér fokus ved lukking
+- [x] **Modal-tilgjengelighet**: Esc lukker, focus-trap, returnér fokus ved lukking
 - [x] ~~Lås Google Maps API-nøkkel~~ — obsolet, GeoChart erstattet med react-simple-maps (ingen nøkkel)
 
 ## Fase 5 — Grafer / statistikk ✅
@@ -44,6 +44,5 @@
 
 ## Til slutt
 
-- [ ] Be Claude hente bildene fra Imgur og lagre den som en del av repoet isteden.
-
-
+- [x] Be Claude hente bildene fra Imgur og lagre den som en del av repoet isteden.
+- [x] Bedre resolusjon på mobil, nå er bøkene for store og hyllen har bare to bøker per rad. Bøkene står også litt feil på hyllen.

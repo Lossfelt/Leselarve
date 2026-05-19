@@ -584,11 +584,10 @@ button {
     padding: 14px;
   }
   .bookshelf-grid {
-    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
   }
   .shelf-cell {
-    min-height: 230px;
-    padding: 18px 8px 20px;
+    padding: 22px 10px 36px;
   }
   .modal {
     grid-template-columns: 1fr;
@@ -601,6 +600,32 @@ button {
   }
   .stat-card {
     padding: 16px 14px 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .bookshelf {
+    padding: 10px;
+  }
+  .bookshelf-grid {
+    grid-template-columns: repeat(auto-fill, minmax(85px, 1fr));
+    grid-auto-rows: 210px;
+    background:
+      radial-gradient(
+          ellipse 65% 40px at 50% 178px,
+          rgba(255, 195, 120, 0.18),
+          rgba(255, 195, 120, 0) 75%
+        )
+        0 0 / 100% 210px repeat-y,
+      url("/Bokhylle_asset_3.png") 0 117px / 100% 210px repeat,
+      url("/Bokhylle_asset_1.png") 0 0 / 800px 800px repeat;
+    background-color: #2a1808;
+  }
+  .shelf-cell {
+    padding: 14px 5px 22px;
+  }
+  .book-on-shelf {
+    max-width: 110px;
   }
 }
 

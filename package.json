@@ -4,7 +4,7 @@
   "description": "Bokklubb-side som viser bøkene vi har lest.",
   "type": "module",
   "scripts": {
-    "dev": "vite",
+    "dev": "vite dev --host",
     "build": "tsc --noEmit && vite build",
     "preview": "vite preview",
     "typecheck": "tsc --noEmit",
