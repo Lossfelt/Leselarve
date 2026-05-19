@@ -12,10 +12,7 @@
 
 ## Fase 3 — Visuell redesign: bokhylle ✅
 
-Gjenstår som valgfri polish:
 
-- [ ] Dekor (plante, klode, småbøker) — venter på assets
-- [ ] Sentrering av siste rad / dekor i tomme celler
 
 ### Backlog (forsøkt / forkastet)
 
