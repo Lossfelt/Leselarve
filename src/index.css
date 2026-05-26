@@ -561,6 +561,14 @@ button {
   display: block;
 }
 
+.geo-country {
+  transition: fill 120ms ease-in-out;
+}
+
+.geo-country:hover {
+  fill: #a85a40;
+}
+
 /* ----------------------------- Responsive ----------------------------- */
 
 @media (max-width: 720px) {

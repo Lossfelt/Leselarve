@@ -1,4 +1,6 @@
-import { useMemo, type ReactNode } from "react";
+import { useEffect, useMemo, useState, type ReactNode } from "react";
+import { geoEqualEarth, geoPath } from "d3-geo";
+import countries110mUrl from "world-atlas/countries-110m.json?url";
 import {
   BarChart,
   Bar,
@@ -12,7 +14,7 @@ import {
   Area,
   ComposedChart
 } from "recharts";
-import { ComposableMap, Geographies, Geography } from "react-simple-maps";
+import { feature } from "topojson-client";
 import type { Book } from "../types.ts";
 
 const PALETTE = {
@@ -53,7 +55,17 @@ const COUNTRY_NAME_FIX: Record<string, string> = {
   US: "United States of America"
 };
 
-const GEO_URL = "https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json";
+const GEO_URL = countries110mUrl;
+const MAP_WIDTH = 800;
+const MAP_HEIGHT = 380;
+
+type MapFeature = {
+  rsmKey: string;
+  properties: {
+    name?: string;
+  };
+  path: string | null;
+};
 
 type NamedValue = { name: string; verdi: number };
 
@@ -173,6 +185,61 @@ function ChartCard({ title, description, children, wide }: ChartCardProps) {
 }
 
 function BooksMap({ countries }: { countries: NamedValue[] }) {
+  const [geographies, setGeographies] = useState<MapFeature[]>([]);
+  const [loadError, setLoadError] = useState(false);
+
+  useEffect(() => {
+    let cancelled = false;
+
+    async function loadGeographies() {
+      try {
+        const response = await fetch(GEO_URL);
+        if (!response.ok) throw new Error(`Kunne ikke hente kartdata: ${response.status}`);
+
+        const topology = (await response.json()) as {
+          objects?: { countries?: unknown };
+        };
+        const countriesObject = topology.objects?.countries;
+        if (!countriesObject) throw new Error("Fant ikke landdata i TopoJSON-filen");
+
+        const collection = feature(topology as never, countriesObject as never) as unknown as {
+          features?: Array<{
+            id?: string | number;
+            properties?: { name?: string };
+          }>;
+        };
+        if (!collection.features) throw new Error("Kartdata kom ikke tilbake som en feature-samling");
+
+        const projection = geoEqualEarth();
+        projection.fitSize([MAP_WIDTH, MAP_HEIGHT], collection as never);
+        const pathGenerator = geoPath(projection);
+
+        const nextGeographies = collection.features.map((geo, index) => ({
+          rsmKey: String(geo.id ?? index),
+          properties: {
+            name: geo.properties?.name
+          },
+          path: pathGenerator(geo as never)
+        }));
+
+        if (!cancelled) {
+          setGeographies(nextGeographies);
+          setLoadError(false);
+        }
+      } catch {
+        if (!cancelled) {
+          setLoadError(true);
+        }
+      }
+    }
+
+    void loadGeographies();
+
+    return () => {
+      cancelled = true;
+    };
+  }, []);
+
   const counts = useMemo(() => {
     const out: Record<string, number> = {};
     for (const { name, verdi } of countries) {
@@ -195,38 +262,35 @@ function BooksMap({ countries }: { countries: NamedValue[] }) {
 
   return (
     <div className="geo-wrap">
-      <ComposableMap
-        projection="geoEqualEarth"
-        projectionConfig={{ scale: 165 }}
-        style={{ width: "100%", height: "100%" }}
-      >
-        <Geographies geography={GEO_URL}>
-          {({ geographies }) =>
-            geographies.map((geo) => {
-              const name = geo.properties.name;
-              const count = counts[name] ?? 0;
-              return (
-                <Geography
-                  key={geo.rsmKey}
-                  geography={geo}
-                  fill={colorFor(count)}
-                  stroke="#c9b48a"
-                  strokeWidth={0.4}
-                  style={{
-                    default: { outline: "none" },
-                    hover: { outline: "none", fill: PALETTE.terracotta },
-                    pressed: { outline: "none" }
-                  }}
-                >
-                  <title>
-                    {count > 0 ? `${name}: ${count} bok${count === 1 ? "" : "er"}` : name}
-                  </title>
-                </Geography>
-              );
-            })
-          }
-        </Geographies>
-      </ComposableMap>
+      {loadError ? (
+        <div className="stats-loading">Kunne ikke laste kartet.</div>
+      ) : geographies.length === 0 ? (
+        <div className="stats-loading">Laster kart...</div>
+      ) : (
+        <svg
+          viewBox={`0 0 ${MAP_WIDTH} ${MAP_HEIGHT}`}
+          aria-label="Verdenskart over forfatternes nasjonaliteter"
+        >
+          {geographies.map((geo) => {
+            const name = geo.properties.name ?? "Ukjent";
+            const count = counts[name] ?? 0;
+            return (
+              <path
+                key={geo.rsmKey}
+                className="geo-country"
+                d={geo.path ?? ""}
+                fill={colorFor(count)}
+                stroke="#c9b48a"
+                strokeWidth={0.4}
+              >
+                <title>
+                  {count > 0 ? `${name}: ${count} bok${count === 1 ? "" : "er"}` : name}
+                </title>
+              </path>
+            );
+          })}
+        </svg>
+      )}
     </div>
   );
 }
