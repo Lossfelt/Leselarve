@@ -719,13 +719,28 @@
     "pages": 375,
     "numberInLine": 43,
     "terningkastene": [
+      { "medlem": "Levin", "terningkast": 6 },
+      { "medlem": "Øivind", "terningkast": 0 },
+      { "medlem": "Silje", "terningkast": 6 },
+      { "medlem": "Heidi", "terningkast": 5 }
+    ],
+    "picture": "/bookcovers/43.jpg"
+  },
+  {
+    "title": "The Fault in Our Stars",
+    "author": "John Green",
+    "authorNationality": "US",
+    "published": 2012,
+    "chosenBy": "Levin",
+    "pages": 313,
+    "numberInLine": 44,
+    "terningkastene": [
       { "medlem": "Levin", "terningkast": 0 },
       { "medlem": "Øivind", "terningkast": 0 },
       { "medlem": "Silje", "terningkast": 0 },
       { "medlem": "Ida", "terningkast": 0 },
-      { "medlem": "Heidi", "terningkast": 0 },
-      { "medlem": "Kyrre", "terningkast": 0 }
+      { "medlem": "Heidi", "terningkast": 0 }
     ],
-    "picture": "/bookcovers/43.jpg"
+    "picture": "/bookcovers/44.jpg"
   }
 ]
