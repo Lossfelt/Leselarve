@@ -1,0 +1,32 @@
+# Kjoerer lint og bygg paa hver push til master og paa hver pull request.
+#
+# Netlify bygger ogsaa hver PR, men kjoerer bare `npm run build`. Lint blir
+# ikke kjoert noe sted automatisk uten denne workflowen.
+name: CI
+
+on:
+  push:
+    branches: [master]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  sjekk:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - run: npm ci
+
+      - run: npm run lint
+
+      # `npm run build` er `tsc --noEmit && vite build`, saa typesjekken
+      # ligger inne her. Derfor ingen egen typecheck-steg.
+      - run: npm run build
