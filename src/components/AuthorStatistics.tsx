@@ -67,7 +67,12 @@ export default function AuthorStatistics({ books }: { books: Book[] }) {
               </dt>
               <dd>
                 {counts[key]}{" "}
-                <span>{total ? Math.round((counts[key] / total) * 100) : 0} %</span>
+                <span>
+                  {(total ? (counts[key] / total) * 100 : 0).toLocaleString("nb-NO", {
+                    maximumFractionDigits: 1
+                  })}{" "}
+                  %
+                </span>
               </dd>
             </div>
           ))}
