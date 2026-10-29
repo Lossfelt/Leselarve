@@ -759,5 +759,22 @@
       { "medlem": "Heidi", "terningkast": 4 }
     ],
     "picture": "/bookcovers/45.jpg"
+  },
+  {
+    "title": "Et øye lukket",
+    "author": "Cecilie Enger",
+    "authorNationality": "Norway",
+    "published": 2026,
+    "chosenBy": "Heidi",
+    "pages": 256,
+    "numberInLine": 46,
+    "terningkastene": [
+      { "medlem": "Levin", "terningkast": 0 },
+      { "medlem": "Øivind", "terningkast": 0 },
+      { "medlem": "Silje", "terningkast": 0 },
+      { "medlem": "Ida", "terningkast": 0 },
+      { "medlem": "Heidi", "terningkast": 0 }
+    ],
+    "picture": "/bookcovers/46.jpg"
   }
 ]
