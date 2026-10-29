@@ -1,0 +1,1282 @@
+[
+  {
+    "title": "Trilogien",
+    "author": "Jon Fosse",
+    "chosenBy": "Øivind",
+    "numberInLine": 1,
+    "terningkastene": [
+      {
+        "medlem": "Levin",
+        "terningkast": 3
+      },
+      {
+        "medlem": "Øivind",
+        "terningkast": 5
+      },
+      {
+        "medlem": "Silje",
+        "terningkast": 5
+      },
+      {
+        "medlem": "Ida",
+        "terningkast": 4
+      }
+    ]
+  },
+  {
+    "title": "Null",
+    "author": "Gine Cornelia Pedersen",
+    "chosenBy": "Silje",
+    "numberInLine": 2,
+    "terningkastene": [
+      {
+        "medlem": "Levin",
+        "terningkast": 4
+      },
+      {
+        "medlem": "Øivind",
+        "terningkast": 1
+      },
+      {
+        "medlem": "Silje",
+        "terningkast": 4
+      },
+      {
+        "medlem": "Ida",
+        "terningkast": 3
+      }
+    ]
+  },
+  {
+    "title": "1984",
+    "author": "George Orwell",
+    "chosenBy": "Levin",
+    "numberInLine": 3,
+    "terningkastene": [
+      {
+        "medlem": "Levin",
+        "terningkast": 5
+      },
+      {
+        "medlem": "Øivind",
+        "terningkast": 6
+      },
+      {
+        "medlem": "Silje",
+        "terningkast": 4
+      },
+      {
+        "medlem": "Ida",
+        "terningkast": 4
+      }
+    ]
+  },
+  {
+    "title": "Farvel til Eddy Bellegueule",
+    "author": "Édouard Louis",
+    "chosenBy": "Ida",
+    "numberInLine": 4,
+    "terningkastene": [
+      {
+        "medlem": "Levin",
+        "terningkast": 3
+      },
+      {
+        "medlem": "Øivind",
+        "terningkast": 6
+      },
+      {
+        "medlem": "Silje",
+        "terningkast": 5
+      },
+      {
+        "medlem": "Ida",
+        "terningkast": 5
+      }
+    ]
+  },
+  {
+    "title": "Merkelig vær i Tokyo",
+    "author": "Hiromi Kawakami",
+    "chosenBy": "Øivind",
+    "numberInLine": 5,
+    "terningkastene": [
+      {
+        "medlem": "Levin",
+        "terningkast": 4
+      },
+      {
+        "medlem": "Øivind",
+        "terningkast": 6
+      },
+      {
+        "medlem": "Silje",
+        "terningkast": 6
+      },
+      {
+        "medlem": "Ida",
+        "terningkast": 6
+      }
+    ]
+  },
+  {
+    "title": "The Ice Storm",
+    "author": "Rick Moody",
+    "chosenBy": "Silje",
+    "numberInLine": 6,
+    "terningkastene": [
+      {
+        "medlem": "Levin",
+        "terningkast": 5
+      },
+      {
+        "medlem": "Øivind",
+        "terningkast": 3
+      },
+      {
+        "medlem": "Silje",
+        "terningkast": 3
+      },
+      {
+        "medlem": "Ida",
+        "terningkast": 4
+      }
+    ]
+  },
+  {
+    "title": "Odinsbarn",
+    "author": "Siri Pettersen",
+    "chosenBy": "Levin",
+    "numberInLine": 7,
+    "terningkastene": [
+      {
+        "medlem": "Levin",
+        "terningkast": 5
+      },
+      {
+        "medlem": "Øivind",
+        "terningkast": 5
+      },
+      {
+        "medlem": "Silje",
+        "terningkast": 4
+      },
+      {
+        "medlem": "Ida",
+        "terningkast": 5
+      },
+      {
+        "medlem": "Heidi",
+        "terningkast": 4
+      }
+    ]
+  },
+  {
+    "title": "Mi briljante venninne",
+    "author": "Elena Ferrante",
+    "chosenBy": "Ida",
+    "numberInLine": 8,
+    "terningkastene": [
+      {
+        "medlem": "Levin",
+        "terningkast": 3
+      },
+      {
+        "medlem": "Øivind",
+        "terningkast": 3
+      },
+      {
+        "medlem": "Silje",
+        "terningkast": 3
+      },
+      {
+        "medlem": "Ida",
+        "terningkast": 3
+      },
+      {
+        "medlem": "Heidi",
+        "terningkast": 4
+      }
+    ]
+  },
+  {
+    "title": "Fellside",
+    "author": "M.R. Carey",
+    "chosenBy": "Heidi",
+    "numberInLine": 9,
+    "terningkastene": [
+      {
+        "medlem": "Levin",
+        "terningkast": 4
+      },
+      {
+        "medlem": "Øivind",
+        "terningkast": 4
+      },
+      {
+        "medlem": "Silje",
+        "terningkast": 3
+      },
+      {
+        "medlem": "Ida",
+        "terningkast": 2
+      },
+      {
+        "medlem": "Heidi",
+        "terningkast": 3
+      }
+    ]
+  },
+  {
+    "title": "Reisen til nattens ende",
+    "author": "Louis-Ferdinand Céline",
+    "chosenBy": "Øivind",
+    "numberInLine": 10,
+    "terningkastene": [
+      {
+        "medlem": "Levin",
+        "terningkast": 4
+      },
+      {
+        "medlem": "Øivind",
+        "terningkast": 6
+      },
+      {
+        "medlem": "Silje",
+        "terningkast": 4
+      },
+      {
+        "medlem": "Ida",
+        "terningkast": 5
+      },
+      {
+        "medlem": "Heidi",
+        "terningkast": 5
+      }
+    ]
+  },
+  {
+    "title": "Imot naturen",
+    "author": "Tomas Espedal",
+    "chosenBy": "Silje",
+    "numberInLine": 11,
+    "terningkastene": [
+      {
+        "medlem": "Levin",
+        "terningkast": 5
+      },
+      {
+        "medlem": "Øivind",
+        "terningkast": 3
+      },
+      {
+        "medlem": "Silje",
+        "terningkast": 5
+      },
+      {
+        "medlem": "Ida",
+        "terningkast": 3
+      },
+      {
+        "medlem": "Heidi",
+        "terningkast": 5
+      }
+    ]
+  },
+  {
+    "title": "Breakfast at Tiffany's",
+    "author": "Truman Capote",
+    "chosenBy": "Levin",
+    "numberInLine": 12,
+    "terningkastene": [
+      {
+        "medlem": "Levin",
+        "terningkast": 5
+      },
+      {
+        "medlem": "Øivind",
+        "terningkast": 4
+      },
+      {
+        "medlem": "Silje",
+        "terningkast": 4
+      },
+      {
+        "medlem": "Ida",
+        "terningkast": 3
+      },
+      {
+        "medlem": "Heidi",
+        "terningkast": 4
+      }
+    ]
+  },
+  {
+    "title": "Et norsk hus",
+    "author": "Vigdis Hjorth",
+    "chosenBy": "Ida",
+    "numberInLine": 13,
+    "terningkastene": [
+      {
+        "medlem": "Levin",
+        "terningkast": 4
+      },
+      {
+        "medlem": "Øivind",
+        "terningkast": 5
+      },
+      {
+        "medlem": "Silje",
+        "terningkast": 5
+      },
+      {
+        "medlem": "Ida",
+        "terningkast": 5
+      },
+      {
+        "medlem": "Heidi",
+        "terningkast": 5
+      }
+    ]
+  },
+  {
+    "title": "Fever Dream",
+    "author": "Samanta Schweblin",
+    "chosenBy": "Heidi",
+    "numberInLine": 14,
+    "terningkastene": [
+      {
+        "medlem": "Levin",
+        "terningkast": 3
+      },
+      {
+        "medlem": "Øivind",
+        "terningkast": 5
+      },
+      {
+        "medlem": "Silje",
+        "terningkast": 5
+      },
+      {
+        "medlem": "Ida",
+        "terningkast": 2
+      },
+      {
+        "medlem": "Heidi",
+        "terningkast": 5
+      }
+    ]
+  },
+  {
+    "title": "Den flammende verden",
+    "author": "Siri Hustvedt",
+    "chosenBy": "Øivind",
+    "numberInLine": 15,
+    "terningkastene": [
+      {
+        "medlem": "Levin",
+        "terningkast": 6
+      },
+      {
+        "medlem": "Øivind",
+        "terningkast": 6
+      },
+      {
+        "medlem": "Silje",
+        "terningkast": 6
+      },
+      {
+        "medlem": "Ida",
+        "terningkast": 6
+      },
+      {
+        "medlem": "Heidi",
+        "terningkast": 5
+      }
+    ]
+  },
+  {
+    "title": "Oppløsningstendenser",
+    "author": "Nina Lykke",
+    "chosenBy": "Silje",
+    "numberInLine": 16,
+    "terningkastene": [
+      {
+        "medlem": "Levin",
+        "terningkast": 4
+      },
+      {
+        "medlem": "Øivind",
+        "terningkast": 3
+      },
+      {
+        "medlem": "Silje",
+        "terningkast": 4
+      },
+      {
+        "medlem": "Ida",
+        "terningkast": 4
+      },
+      {
+        "medlem": "Heidi",
+        "terningkast": 4
+      }
+    ]
+  },
+  {
+    "title": "Pride & Prejudice",
+    "author": "Jane Austen",
+    "chosenBy": "Levin",
+    "numberInLine": 17,
+    "terningkastene": [
+      {
+        "medlem": "Levin",
+        "terningkast": 5
+      },
+      {
+        "medlem": "Øivind",
+        "terningkast": 4
+      },
+      {
+        "medlem": "Silje",
+        "terningkast": 5
+      },
+      {
+        "medlem": "Ida",
+        "terningkast": 3
+      },
+      {
+        "medlem": "Heidi",
+        "terningkast": 5
+      }
+    ]
+  },
+  {
+    "title": "Infinite Jest",
+    "author": "David Foster Wallace",
+    "chosenBy": "Ida",
+    "numberInLine": 18,
+    "terningkastene": [
+      {
+        "medlem": "Levin",
+        "terningkast": 4
+      }
+    ]
+  },
+  {
+    "title": "Station Eleven",
+    "author": "Emily St. John Mandel",
+    "chosenBy": "Heidi",
+    "numberInLine": 19,
+    "terningkastene": [
+      {
+        "medlem": "Levin",
+        "terningkast": 6
+      },
+      {
+        "medlem": "Øivind",
+        "terningkast": 6
+      },
+      {
+        "medlem": "Silje",
+        "terningkast": 6
+      },
+      {
+        "medlem": "Ida",
+        "terningkast": 4
+      },
+      {
+        "medlem": "Heidi",
+        "terningkast": 5
+      }
+    ]
+  },
+  {
+    "title": "Alle Dagers Ende",
+    "author": "Jenny Erpenbeck",
+    "chosenBy": "Øivind",
+    "numberInLine": 20,
+    "terningkastene": [
+      {
+        "medlem": "Levin",
+        "terningkast": 4
+      },
+      {
+        "medlem": "Øivind",
+        "terningkast": 2
+      },
+      {
+        "medlem": "Silje",
+        "terningkast": 3
+      },
+      {
+        "medlem": "Ida",
+        "terningkast": 4
+      },
+      {
+        "medlem": "Heidi",
+        "terningkast": 3
+      }
+    ]
+  },
+  {
+    "title": "Resten av dagen",
+    "author": "Kazuo Ishiguro",
+    "chosenBy": "Silje",
+    "numberInLine": 21,
+    "terningkastene": [
+      {
+        "medlem": "Levin",
+        "terningkast": 4
+      },
+      {
+        "medlem": "Øivind",
+        "terningkast": 3
+      },
+      {
+        "medlem": "Silje",
+        "terningkast": 4
+      },
+      {
+        "medlem": "Ida",
+        "terningkast": 3
+      },
+      {
+        "medlem": "Heidi",
+        "terningkast": 3
+      }
+    ]
+  },
+  {
+    "title": "All Quiet on the Western Front",
+    "author": "Erich Maria Remarque",
+    "chosenBy": "Levin",
+    "numberInLine": 22,
+    "terningkastene": [
+      {
+        "medlem": "Levin",
+        "terningkast": 5
+      },
+      {
+        "medlem": "Øivind",
+        "terningkast": 6
+      },
+      {
+        "medlem": "Silje",
+        "terningkast": 5
+      },
+      {
+        "medlem": "Ida",
+        "terningkast": 4
+      },
+      {
+        "medlem": "Heidi",
+        "terningkast": 5
+      }
+    ]
+  },
+  {
+    "title": "Tung Tids Tale",
+    "author": "Olaug Nilssen",
+    "chosenBy": "Ida",
+    "numberInLine": 23,
+    "terningkastene": [
+      {
+        "medlem": "Levin",
+        "terningkast": 3
+      },
+      {
+        "medlem": "Øivind",
+        "terningkast": 3
+      },
+      {
+        "medlem": "Silje",
+        "terningkast": 4
+      },
+      {
+        "medlem": "Ida",
+        "terningkast": 4
+      },
+      {
+        "medlem": "Heidi",
+        "terningkast": 4
+      }
+    ]
+  },
+  {
+    "title": "The Rest of Us Just Live Here",
+    "author": "Patrick Ness",
+    "chosenBy": "Heidi",
+    "numberInLine": 24,
+    "terningkastene": [
+      {
+        "medlem": "Levin",
+        "terningkast": 3
+      },
+      {
+        "medlem": "Øivind",
+        "terningkast": 3
+      },
+      {
+        "medlem": "Silje",
+        "terningkast": 2
+      },
+      {
+        "medlem": "Ida",
+        "terningkast": 2
+      },
+      {
+        "medlem": "Heidi",
+        "terningkast": 3
+      }
+    ]
+  },
+  {
+    "title": "Kraften",
+    "author": "Naomi Alderman",
+    "chosenBy": "Øivind",
+    "numberInLine": 25,
+    "terningkastene": [
+      {
+        "medlem": "Levin",
+        "terningkast": 4
+      },
+      {
+        "medlem": "Øivind",
+        "terningkast": 3
+      },
+      {
+        "medlem": "Silje",
+        "terningkast": 3
+      },
+      {
+        "medlem": "Ida",
+        "terningkast": 4
+      },
+      {
+        "medlem": "Heidi",
+        "terningkast": 2
+      }
+    ]
+  },
+  {
+    "title": "Vernon Subutex 1",
+    "author": "Virginie Despentes",
+    "chosenBy": "Silje",
+    "numberInLine": 26,
+    "terningkastene": [
+      {
+        "medlem": "Levin",
+        "terningkast": 6
+      },
+      {
+        "medlem": "Øivind",
+        "terningkast": 6
+      },
+      {
+        "medlem": "Silje",
+        "terningkast": 6
+      },
+      {
+        "medlem": "Ida",
+        "terningkast": 5
+      },
+      {
+        "medlem": "Heidi",
+        "terningkast": 5
+      }
+    ]
+  },
+  {
+    "title": "The Left Hand of Darkness",
+    "author": "Ursula K. Le Guin",
+    "chosenBy": "Levin",
+    "numberInLine": 27,
+    "terningkastene": [
+      {
+        "medlem": "Levin",
+        "terningkast": 5
+      },
+      {
+        "medlem": "Øivind",
+        "terningkast": 6
+      },
+      {
+        "medlem": "Silje",
+        "terningkast": 5
+      },
+      {
+        "medlem": "Ida",
+        "terningkast": 4
+      },
+      {
+        "medlem": "Heidi",
+        "terningkast": 5
+      }
+    ]
+  },
+  {
+    "title": "Sommerlys, og så kommer natten",
+    "author": "Jón Kalman Stefánsson",
+    "chosenBy": "Ida",
+    "numberInLine": 28,
+    "terningkastene": [
+      {
+        "medlem": "Levin",
+        "terningkast": 5
+      },
+      {
+        "medlem": "Øivind",
+        "terningkast": 5
+      },
+      {
+        "medlem": "Silje",
+        "terningkast": 5
+      },
+      {
+        "medlem": "Ida",
+        "terningkast": 6
+      },
+      {
+        "medlem": "Heidi",
+        "terningkast": 4
+      },
+      {
+        "medlem": "Kyrre",
+        "terningkast": 4
+      }
+    ]
+  },
+  {
+    "title": "For øvrig mener jeg at Karthago bør ødelegges",
+    "author": "Kyrre Andreassen",
+    "chosenBy": "Heidi",
+    "numberInLine": 29,
+    "terningkastene": [
+      {
+        "medlem": "Levin",
+        "terningkast": 2
+      },
+      {
+        "medlem": "Øivind",
+        "terningkast": 4
+      },
+      {
+        "medlem": "Silje",
+        "terningkast": 5
+      },
+      {
+        "medlem": "Ida",
+        "terningkast": 3
+      },
+      {
+        "medlem": "Heidi",
+        "terningkast": 6
+      },
+      {
+        "medlem": "Kyrre",
+        "terningkast": 4
+      }
+    ]
+  },
+  {
+    "title": "Grief is the Thing with Feathers",
+    "author": "Max Porter",
+    "chosenBy": "Kyrre",
+    "numberInLine": 30,
+    "terningkastene": [
+      {
+        "medlem": "Levin",
+        "terningkast": 4
+      },
+      {
+        "medlem": "Øivind",
+        "terningkast": 5
+      },
+      {
+        "medlem": "Silje",
+        "terningkast": 4
+      },
+      {
+        "medlem": "Ida",
+        "terningkast": 4
+      },
+      {
+        "medlem": "Heidi",
+        "terningkast": 6
+      },
+      {
+        "medlem": "Kyrre",
+        "terningkast": 5
+      }
+    ]
+  },
+  {
+    "title": "The Sailor Who Fell from Grace with the Sea",
+    "author": "Yukio Mishima",
+    "chosenBy": "Øivind",
+    "numberInLine": 31,
+    "terningkastene": [
+      {
+        "medlem": "Levin",
+        "terningkast": 5
+      },
+      {
+        "medlem": "Øivind",
+        "terningkast": 3
+      },
+      {
+        "medlem": "Silje",
+        "terningkast": 2
+      },
+      {
+        "medlem": "Ida",
+        "terningkast": 4
+      },
+      {
+        "medlem": "Heidi",
+        "terningkast": 3
+      },
+      {
+        "medlem": "Kyrre",
+        "terningkast": 2
+      }
+    ]
+  },
+  {
+    "title": "The Plot Against America",
+    "author": "Philip Roth",
+    "chosenBy": "Silje",
+    "numberInLine": 32,
+    "terningkastene": [
+      {
+        "medlem": "Levin",
+        "terningkast": 4
+      },
+      {
+        "medlem": "Øivind",
+        "terningkast": 2
+      },
+      {
+        "medlem": "Silje",
+        "terningkast": 1
+      },
+      {
+        "medlem": "Ida",
+        "terningkast": 5
+      },
+      {
+        "medlem": "Heidi",
+        "terningkast": 3
+      },
+      {
+        "medlem": "Kyrre",
+        "terningkast": 3
+      }
+    ]
+  },
+  {
+    "title": "Things Fall Apart",
+    "author": "Chinua Achebe",
+    "chosenBy": "Levin",
+    "numberInLine": 33,
+    "terningkastene": [
+      {
+        "medlem": "Levin",
+        "terningkast": 3
+      },
+      {
+        "medlem": "Øivind",
+        "terningkast": 5
+      },
+      {
+        "medlem": "Silje",
+        "terningkast": 4
+      },
+      {
+        "medlem": "Ida",
+        "terningkast": 4
+      },
+      {
+        "medlem": "Heidi",
+        "terningkast": 4
+      },
+      {
+        "medlem": "Kyrre",
+        "terningkast": 3
+      }
+    ]
+  },
+  {
+    "title": "Styrtet Engel",
+    "author": "Per Olov Enquist",
+    "chosenBy": "Ida",
+    "numberInLine": 34,
+    "terningkastene": [
+      {
+        "medlem": "Levin",
+        "terningkast": 3
+      },
+      {
+        "medlem": "Øivind",
+        "terningkast": 4
+      },
+      {
+        "medlem": "Silje",
+        "terningkast": 5
+      },
+      {
+        "medlem": "Ida",
+        "terningkast": 5
+      },
+      {
+        "medlem": "Heidi",
+        "terningkast": 4
+      },
+      {
+        "medlem": "Kyrre",
+        "terningkast": 6
+      }
+    ]
+  },
+  {
+    "title": "Beloved",
+    "author": "Toni Morrison",
+    "chosenBy": "Heidi",
+    "numberInLine": 35,
+    "terningkastene": [
+      {
+        "medlem": "Levin",
+        "terningkast": 3
+      },
+      {
+        "medlem": "Øivind",
+        "terningkast": 3
+      },
+      {
+        "medlem": "Silje",
+        "terningkast": 2
+      },
+      {
+        "medlem": "Ida",
+        "terningkast": 5
+      },
+      {
+        "medlem": "Kyrre",
+        "terningkast": 4
+      }
+    ]
+  },
+  {
+    "title": "To the Lighthouse",
+    "author": "Virginia Woolf",
+    "chosenBy": "Kyrre",
+    "numberInLine": 36,
+    "terningkastene": [
+      {
+        "medlem": "Levin",
+        "terningkast": 6
+      },
+      {
+        "medlem": "Øivind",
+        "terningkast": 6
+      },
+      {
+        "medlem": "Silje",
+        "terningkast": 2
+      },
+      {
+        "medlem": "Ida",
+        "terningkast": 2
+      },
+      {
+        "medlem": "Heidi",
+        "terningkast": 2
+      },
+      {
+        "medlem": "Kyrre",
+        "terningkast": 5
+      }
+    ]
+  },
+  {
+    "title": "The Stars My Destination",
+    "author": "Alfred Bester",
+    "chosenBy": "Øivind",
+    "numberInLine": 37,
+    "terningkastene": [
+      {
+        "medlem": "Levin",
+        "terningkast": 6
+      },
+      {
+        "medlem": "Øivind",
+        "terningkast": 6
+      },
+      {
+        "medlem": "Silje",
+        "terningkast": 3
+      },
+      {
+        "medlem": "Ida",
+        "terningkast": 3
+      },
+      {
+        "medlem": "Heidi",
+        "terningkast": 4
+      },
+      {
+        "medlem": "Kyrre",
+        "terningkast": 3
+      }
+    ]
+  },
+  {
+    "title": "The Understory",
+    "author": "Pamela Erens",
+    "chosenBy": "Silje",
+    "numberInLine": 38,
+    "terningkastene": [
+      {
+        "medlem": "Levin",
+        "terningkast": 4
+      },
+      {
+        "medlem": "Øivind",
+        "terningkast": 6
+      },
+      {
+        "medlem": "Silje",
+        "terningkast": 5
+      },
+      {
+        "medlem": "Heidi",
+        "terningkast": 3
+      },
+      {
+        "medlem": "Kyrre",
+        "terningkast": 4
+      }
+    ]
+  },
+  {
+    "title": "The Giver",
+    "author": "Lois Lowry",
+    "chosenBy": "Levin",
+    "numberInLine": 39,
+    "terningkastene": [
+      {
+        "medlem": "Levin",
+        "terningkast": 3
+      },
+      {
+        "medlem": "Øivind",
+        "terningkast": 3
+      },
+      {
+        "medlem": "Silje",
+        "terningkast": 3
+      },
+      {
+        "medlem": "Heidi",
+        "terningkast": 4
+      },
+      {
+        "medlem": "Kyrre",
+        "terningkast": 3
+      }
+    ]
+  },
+  {
+    "title": "To Be Taught, If Fortunate: A Novella",
+    "author": "Becky Chambers",
+    "chosenBy": "Heidi",
+    "numberInLine": 40,
+    "terningkastene": [
+      {
+        "medlem": "Levin",
+        "terningkast": 5
+      },
+      {
+        "medlem": "Øivind",
+        "terningkast": 4
+      },
+      {
+        "medlem": "Silje",
+        "terningkast": 5
+      },
+      {
+        "medlem": "Heidi",
+        "terningkast": 5
+      },
+      {
+        "medlem": "Kyrre",
+        "terningkast": 2
+      }
+    ]
+  },
+  {
+    "title": "Lavterskeltilbud",
+    "author": "Jens M. Johansson",
+    "chosenBy": "Kyrre",
+    "numberInLine": 41,
+    "terningkastene": [
+      {
+        "medlem": "Levin",
+        "terningkast": 3
+      },
+      {
+        "medlem": "Øivind",
+        "terningkast": 4
+      },
+      {
+        "medlem": "Silje",
+        "terningkast": 5
+      },
+      {
+        "medlem": "Heidi",
+        "terningkast": 3
+      },
+      {
+        "medlem": "Kyrre",
+        "terningkast": 3
+      }
+    ]
+  },
+  {
+    "title": "Kvalmen",
+    "author": "Jean-paul Sartre",
+    "chosenBy": "Øivind",
+    "numberInLine": 42,
+    "terningkastene": [
+      {
+        "medlem": "Levin",
+        "terningkast": 3
+      },
+      {
+        "medlem": "Øivind",
+        "terningkast": 5
+      },
+      {
+        "medlem": "Silje",
+        "terningkast": 3
+      },
+      {
+        "medlem": "Heidi",
+        "terningkast": 2
+      },
+      {
+        "medlem": "Kyrre",
+        "terningkast": 5
+      }
+    ]
+  },
+  {
+    "title": "Ein Lykkeleg Slutt",
+    "author": "Maren Uthaug",
+    "chosenBy": "Silje",
+    "numberInLine": 43,
+    "terningkastene": [
+      {
+        "medlem": "Levin",
+        "terningkast": 6
+      },
+      {
+        "medlem": "Øivind",
+        "terningkast": 0
+      },
+      {
+        "medlem": "Silje",
+        "terningkast": 6
+      },
+      {
+        "medlem": "Heidi",
+        "terningkast": 5
+      }
+    ]
+  },
+  {
+    "title": "The Fault in Our Stars",
+    "author": "John Green",
+    "chosenBy": "Levin",
+    "numberInLine": 44,
+    "terningkastene": [
+      {
+        "medlem": "Levin",
+        "terningkast": 5
+      },
+      {
+        "medlem": "Øivind",
+        "terningkast": 0
+      },
+      {
+        "medlem": "Silje",
+        "terningkast": 4
+      },
+      {
+        "medlem": "Ida",
+        "terningkast": 5
+      },
+      {
+        "medlem": "Heidi",
+        "terningkast": 4
+      }
+    ]
+  },
+  {
+    "title": "De siste kjærtegn",
+    "author": "Kjersti Anfinnsen",
+    "chosenBy": "Ida",
+    "numberInLine": 45,
+    "terningkastene": [
+      {
+        "medlem": "Levin",
+        "terningkast": 1
+      },
+      {
+        "medlem": "Øivind",
+        "terningkast": 3
+      },
+      {
+        "medlem": "Silje",
+        "terningkast": 5
+      },
+      {
+        "medlem": "Ida",
+        "terningkast": 5
+      },
+      {
+        "medlem": "Heidi",
+        "terningkast": 4
+      }
+    ]
+  },
+  {
+    "title": "Et øye lukket",
+    "author": "Cecilie Enger",
+    "chosenBy": "Heidi",
+    "numberInLine": 46,
+    "terningkastene": [
+      {
+        "medlem": "Levin",
+        "terningkast": 0
+      },
+      {
+        "medlem": "Øivind",
+        "terningkast": 0
+      },
+      {
+        "medlem": "Silje",
+        "terningkast": 0
+      },
+      {
+        "medlem": "Ida",
+        "terningkast": 0
+      },
+      {
+        "medlem": "Heidi",
+        "terningkast": 0
+      }
+    ]
+  }
+]
