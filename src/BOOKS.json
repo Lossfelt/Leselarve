@@ -752,11 +752,11 @@
     "pages": 143,
     "numberInLine": 45,
     "terningkastene": [
-      { "medlem": "Levin", "terningkast": 0 },
-      { "medlem": "Øivind", "terningkast": 0 },
-      { "medlem": "Silje", "terningkast": 0 },
-      { "medlem": "Ida", "terningkast": 0 },
-      { "medlem": "Heidi", "terningkast": 0 }
+      { "medlem": "Levin", "terningkast": 1 },
+      { "medlem": "Øivind", "terningkast": 3 },
+      { "medlem": "Silje", "terningkast": 5 },
+      { "medlem": "Ida", "terningkast": 5 },
+      { "medlem": "Heidi", "terningkast": 4 }
     ],
     "picture": "/bookcovers/45.jpg"
   }
