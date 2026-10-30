@@ -94,7 +94,7 @@ export function ratingsByChooser(books: Book[]) {
 
 export function formatRating(value: number | null): string {
   return value === null
-    ? "Ingen kast ennå"
+    ? "Ingen terningkast ennå"
     : value.toLocaleString("nb-NO", {
         minimumFractionDigits: 2,
         maximumFractionDigits: 2

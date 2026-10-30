@@ -113,7 +113,7 @@ test("unrated books/members remain visible without fabricated zero averages or r
   );
   assert.deepEqual(ratingsByChooser([]), []);
   assert.deepEqual(ratingsPerBook([]), []);
-  assert.equal(formatRating(null), "Ingen kast ennå");
+  assert.equal(formatRating(null), "Ingen terningkast ennå");
   assert.equal(formatRating(2357 / 540), "4,36");
 });
 

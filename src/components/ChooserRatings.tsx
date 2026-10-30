@@ -19,9 +19,9 @@ export default function ChooserRatings({ books }: { books: Book[] }) {
       </header>
       <p className="stat-method">
         Snittet av bokgjennomsnittene for bøkene personen har valgt. Hver vurderte bok
-        teller likt, uansett antall kast. Bokas snitt beregnes fra alle medlemmenes
-        gyldige kast (1–6). 0, manglende og ugyldige kast utelates. Bøker uten gyldige
-        kast tas ikke med i gjennomsnittet.
+        teller likt, uansett antall terningkast. Bokas snitt beregnes fra alle medlemmenes
+        gyldige terningkast (1–6). 0, manglende og ugyldige terningkast utelates. Bøker
+        uten gyldige terningkast tas ikke med i gjennomsnittet.
       </p>
       {rows.length ? (
         <ol className="chooser-ratings-list">
@@ -38,10 +38,10 @@ export default function ChooserRatings({ books }: { books: Book[] }) {
                 <span style={{ width: `${((row.average ?? 0) / 6) * 100}%` }} />
               </div>
               <p>
-                {row.ratingCount} kast · {row.ratedBookCount} av {row.bookCount} valgte
-                bøker vurdert
+                {row.ratingCount} terningkast · {row.ratedBookCount} av {row.bookCount}{" "}
+                valgte bøker vurdert
                 {row.bookCount > row.ratedBookCount && (
-                  <span> · {row.bookCount - row.ratedBookCount} uten kast</span>
+                  <span> · {row.bookCount - row.ratedBookCount} uten terningkast</span>
                 )}
               </p>
             </li>

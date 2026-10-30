@@ -359,7 +359,7 @@ export default function Statistics({ books }: Props) {
 
       <ChartCard
         title="Terningkast-fordeling per medlem"
-        description="Seks søyler per medlem viser hvor ofte de gir hvert kast 1–6"
+        description="Seks søyler per medlem viser hvor ofte de gir hvert terningkast 1–6"
         wide
       >
         <ResponsiveContainer width="100%" height={320}>
@@ -451,7 +451,7 @@ export default function Statistics({ books }: Props) {
 
       <ChartCard
         title="Terningkast per bok"
-        description="Snitt + spennvidde for gyldige kast (1–6). 0 teller ikke; bøker uten kast vises som hull."
+        description="Snitt + spennvidde for gyldige terningkast (1–6). 0 teller ikke; bøker uten terningkast vises som hull."
         wide
       >
         <ResponsiveContainer width="100%" height={320}>
