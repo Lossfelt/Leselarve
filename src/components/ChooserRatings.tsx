@@ -18,11 +18,10 @@ export default function ChooserRatings({ books }: { books: Book[] }) {
         </p>
       </header>
       <p className="stat-method">
-        Alle gyldige terningkast (1–6) fra alle medlemmer på bøkene valgt av personen
-        legges sammen og deles på antall kast. Hvert kast teller likt, så bøker med flere
-        kast veier mer. Dette er ikke personens egne terningkast eller et snitt av
-        bokgjennomsnittene. 0, manglende kast og bøker uten gyldige kast påvirker ikke
-        snittet.
+        Snittet av bokgjennomsnittene for bøkene personen har valgt. Hver vurderte bok
+        teller likt, uansett antall kast. Bokas snitt beregnes fra alle medlemmenes
+        gyldige kast (1–6). 0, manglende og ugyldige kast utelates. Bøker uten gyldige
+        kast tas ikke med i gjennomsnittet.
       </p>
       {rows.length ? (
         <ol className="chooser-ratings-list">

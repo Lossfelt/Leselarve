@@ -45,27 +45,60 @@ test("ratings include only integer dice rolls from 1 to 6", () => {
   });
 });
 
-test("received ratings are grouped by chooser, not by voter, and weighted per cast", () => {
+test("received ratings are grouped by chooser and give each rated book equal weight", () => {
   const rows = ratingsByChooser([
     makeBook({ terningkastene: casts(6) }),
     makeBook({ terningkastene: casts(2, 2, 2, 0) }),
     makeBook(),
+    makeBook({ terningkastene: casts(0, null, undefined, 7, 2.5, NaN) }),
     makeBook({ chosenBy: "B", terningkastene: casts(5) })
   ]);
   assert.deepEqual(
-    rows.map(({ name, average, ratingCount, bookCount, ratedBookCount, sum }) => ({
-      name,
-      average,
-      ratingCount,
-      bookCount,
-      ratedBookCount,
-      sum
-    })),
+    rows.map(
+      ({ name, average, ratingCount, bookCount, ratedBookCount, bookAverageSum }) => ({
+        name,
+        average,
+        ratingCount,
+        bookCount,
+        ratedBookCount,
+        bookAverageSum
+      })
+    ),
     [
-      { name: "B", average: 5, ratingCount: 1, bookCount: 1, ratedBookCount: 1, sum: 5 },
-      { name: "A", average: 3, ratingCount: 4, bookCount: 3, ratedBookCount: 2, sum: 12 }
+      {
+        name: "B",
+        average: 5,
+        ratingCount: 1,
+        bookCount: 1,
+        ratedBookCount: 1,
+        bookAverageSum: 5
+      },
+      {
+        name: "A",
+        average: 4,
+        ratingCount: 4,
+        bookCount: 4,
+        ratedBookCount: 2,
+        bookAverageSum: 8
+      }
     ]
   );
+});
+
+test("book averages are not rounded before aggregation and extra votes do not increase a book's weight", () => {
+  const input = [
+    makeBook({ terningkastene: casts(1, 1, 2) }),
+    makeBook({ terningkastene: casts(5, 6) })
+  ];
+  const [row] = ratingsByChooser(input);
+  assert.equal(row.average, (4 / 3 + 11 / 2) / 2);
+  assert.notEqual(row.average, (1.33 + 5.5) / 2);
+  const [duplicatedVotes] = ratingsByChooser([
+    input[0],
+    makeBook({ terningkastene: casts(5, 6, 5, 6) })
+  ]);
+  assert.equal(duplicatedVotes.average, row.average);
+  assert.equal(duplicatedVotes.ratingCount, 7);
 });
 
 test("unrated books/members remain visible without fabricated zero averages or ranges", () => {
@@ -81,7 +114,7 @@ test("unrated books/members remain visible without fabricated zero averages or r
   assert.deepEqual(ratingsByChooser([]), []);
   assert.deepEqual(ratingsPerBook([]), []);
   assert.equal(formatRating(null), "Ingen kast ennå");
-  assert.equal(formatRating(191 / 44), "4,34");
+  assert.equal(formatRating(2357 / 540), "4,36");
 });
 
 test("author distribution counts each book once, including repeated authors and all categories", () => {
@@ -143,22 +176,22 @@ test("actual catalog totals and each member drill-down reconcile", () => {
   assert.equal(total, overall.total);
 });
 
-test("actual received rating sums and counts, with seven zero placeholders excluded", () => {
+test("actual equal-book averages and counts, with seven zero placeholders excluded", () => {
   const expected = {
-    Heidi: [138, 36, 7, 8],
-    Ida: [155, 37, 8, 8],
-    Kyrre: [69, 17, 3, 3],
-    Levin: [191, 44, 9, 9],
-    Silje: [169, 42, 9, 9],
-    Øivind: [186, 45, 9, 9]
+    Heidi: [134 / 5, 36, 7, 8],
+    Ida: [1997 / 60, 37, 8, 8],
+    Kyrre: [121 / 10, 17, 3, 3],
+    Levin: [2357 / 60, 44, 9, 9],
+    Silje: [2209 / 60, 42, 9, 9],
+    Øivind: [2261 / 60, 45, 9, 9]
   };
   for (const row of ratingsByChooser(books)) {
-    const [sum, count, rated, total] = expected[row.name];
-    assert.equal(row.sum, sum);
+    const [bookAverageSum, count, rated, total] = expected[row.name];
+    assert.ok(Math.abs(row.bookAverageSum - bookAverageSum) < 1e-12);
     assert.equal(row.ratingCount, count);
     assert.equal(row.ratedBookCount, rated);
     assert.equal(row.bookCount, total);
-    assert.equal(row.average, sum / count);
+    assert.ok(Math.abs(row.average - bookAverageSum / rated) < 1e-12);
   }
   assert.equal(
     ratingsPerBook(books).find((book) => book.name === "Et øye lukket").snitt,

@@ -63,7 +63,7 @@ export function ratingsByChooser(books: Book[]) {
       bookCount: number;
       ratedBookCount: number;
       ratingCount: number;
-      sum: number;
+      bookAverageSum: number;
     }
   >();
   for (const book of books) {
@@ -72,19 +72,19 @@ export function ratingsByChooser(books: Book[]) {
       bookCount: 0,
       ratedBookCount: 0,
       ratingCount: 0,
-      sum: 0
+      bookAverageSum: 0
     };
     const rating = bookRating(book);
     row.bookCount += 1;
     row.ratedBookCount += Number(rating.count > 0);
     row.ratingCount += rating.count;
-    row.sum += rating.sum;
+    row.bookAverageSum += rating.average ?? 0;
     members.set(book.chosenBy, row);
   }
   return [...members.values()]
     .map((row) => ({
       ...row,
-      average: row.ratingCount ? row.sum / row.ratingCount : null
+      average: row.ratedBookCount ? row.bookAverageSum / row.ratedBookCount : null
     }))
     .sort(
       (a, b) =>
