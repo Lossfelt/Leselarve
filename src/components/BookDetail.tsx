@@ -1,5 +1,6 @@
 import { useEffect, useRef } from "react";
 import type { Book } from "../types.ts";
+import { bookRating, formatRating, isValidRating } from "../statistics.ts";
 
 const FOCUSABLE = [
   "a[href]",
@@ -83,8 +84,7 @@ export default function BookDetail({ book, onClose }: Props) {
 
   if (!book) return null;
 
-  const sum = book.terningkastene.reduce((s, t) => s + t.terningkast, 0);
-  const snitt = Math.round((sum / book.terningkastene.length) * 10) / 10;
+  const rating = bookRating(book);
 
   return (
     <div className="modal-backdrop" onClick={onClose}>
@@ -132,8 +132,8 @@ export default function BookDetail({ book, onClose }: Props) {
             <div>
               <dt>Snitt</dt>
               <dd>
-                <span className="dice-value">{snitt}</span>
-                <span className="dice-icon"> 🎲</span>
+                <span className="dice-value">{formatRating(rating.average)}</span>
+                {rating.average !== null && <span className="dice-icon"> 🎲</span>}
               </dd>
             </div>
           </dl>
@@ -142,7 +142,9 @@ export default function BookDetail({ book, onClose }: Props) {
             {book.terningkastene.map((t) => (
               <li key={t.medlem}>
                 <span>{t.medlem}</span>
-                <span className="terningkast-value">{t.terningkast}</span>
+                <span className="terningkast-value">
+                  {isValidRating(t.terningkast) ? t.terningkast : "Ikke vurdert"}
+                </span>
               </li>
             ))}
           </ul>

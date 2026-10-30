@@ -16,6 +16,9 @@ import {
 } from "recharts";
 import { feature } from "topojson-client";
 import type { Book } from "../types.ts";
+import AuthorStatistics from "./AuthorStatistics.tsx";
+import ChooserRatings from "./ChooserRatings.tsx";
+import { isValidRating, ratingsPerBook } from "../statistics.ts";
 
 const PALETTE = {
   olive: "#6b7a3a",
@@ -115,7 +118,7 @@ function diceDistributionPerMember(books: Book[]): DiceRow[] {
   const acc = new Map<string, DiceRow>();
   for (const book of books) {
     for (const t of book.terningkastene) {
-      if (t.terningkast < 1 || t.terningkast > 6) continue;
+      if (!isValidRating(t.terningkast)) continue;
       const row = acc.get(t.medlem) ?? {
         name: t.medlem,
         1: 0,
@@ -130,28 +133,6 @@ function diceDistributionPerMember(books: Book[]): DiceRow[] {
     }
   }
   return [...acc.values()].sort((a, b) => a.name.localeCompare(b.name));
-}
-
-type RatingRow = {
-  name: string;
-  snitt: number;
-  min: number;
-  max: number;
-  range: [number, number];
-};
-
-function ratingsPerBook(books: Book[]): RatingRow[] {
-  return books.map((b) => {
-    const cast = b.terningkastene.map((t) => t.terningkast);
-    const snitt = cast.reduce((s, t) => s + t, 0) / cast.length;
-    return {
-      name: b.title,
-      snitt: Math.round(snitt * 10) / 10,
-      min: Math.min(...cast),
-      max: Math.max(...cast),
-      range: [Math.min(...cast), Math.max(...cast)]
-    };
-  });
 }
 
 function booksByCountry(books: Book[]): NamedValue[] {
@@ -194,7 +175,8 @@ function BooksMap({ countries }: { countries: NamedValue[] }) {
     async function loadGeographies() {
       try {
         const response = await fetch(GEO_URL);
-        if (!response.ok) throw new Error(`Kunne ikke hente kartdata: ${response.status}`);
+        if (!response.ok)
+          throw new Error(`Kunne ikke hente kartdata: ${response.status}`);
 
         const topology = (await response.json()) as {
           objects?: { countries?: unknown };
@@ -202,13 +184,17 @@ function BooksMap({ countries }: { countries: NamedValue[] }) {
         const countriesObject = topology.objects?.countries;
         if (!countriesObject) throw new Error("Fant ikke landdata i TopoJSON-filen");
 
-        const collection = feature(topology as never, countriesObject as never) as unknown as {
+        const collection = feature(
+          topology as never,
+          countriesObject as never
+        ) as unknown as {
           features?: Array<{
             id?: string | number;
             properties?: { name?: string };
           }>;
         };
-        if (!collection.features) throw new Error("Kartdata kom ikke tilbake som en feature-samling");
+        if (!collection.features)
+          throw new Error("Kartdata kom ikke tilbake som en feature-samling");
 
         const projection = geoEqualEarth();
         projection.fitSize([MAP_WIDTH, MAP_HEIGHT], collection as never);
@@ -308,6 +294,7 @@ export default function Statistics({ books }: Props) {
 
   return (
     <div className="stats-grid">
+      <AuthorStatistics books={books} />
       <ChartCard
         title="Gjennomsnittlig sider per medlem"
         description={`Antall bøker totalt: ${books.length}`}
@@ -372,7 +359,7 @@ export default function Statistics({ books }: Props) {
 
       <ChartCard
         title="Terningkast-fordeling per medlem"
-        description="Seks søyler per medlem viser hvor ofte de gir hvert kast 1–6"
+        description="Seks søyler per medlem viser hvor ofte de gir hvert terningkast 1–6"
         wide
       >
         <ResponsiveContainer width="100%" height={320}>
@@ -464,7 +451,7 @@ export default function Statistics({ books }: Props) {
 
       <ChartCard
         title="Terningkast per bok"
-        description="Snitt + spennvidde mellom høyeste og laveste kast"
+        description="Snitt + spennvidde for gyldige terningkast (1–6). 0 teller ikke; bøker uten terningkast vises som hull."
         wide
       >
         <ResponsiveContainer width="100%" height={320}>
@@ -493,6 +480,13 @@ export default function Statistics({ books }: Props) {
             <Tooltip
               contentStyle={tooltipStyle}
               cursor={{ stroke: PALETTE.olive, strokeDasharray: 3 }}
+              formatter={(value) =>
+                Array.isArray(value)
+                  ? value.join("–")
+                  : typeof value === "number"
+                    ? value.toLocaleString("nb-NO", { maximumFractionDigits: 2 })
+                    : value
+              }
             />
             <Area
               type="monotone"
@@ -515,6 +509,7 @@ export default function Statistics({ books }: Props) {
           </ComposedChart>
         </ResponsiveContainer>
       </ChartCard>
+      <ChooserRatings books={books} />
     </div>
   );
 }
