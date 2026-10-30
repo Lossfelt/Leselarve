@@ -13,16 +13,7 @@ export default function ChooserRatings({ books }: { books: Book[] }) {
         <h2 className="stat-card-title" id="chooser-ratings-heading">
           Gjennomsnittlig terningkast etter hvem som valgte boka
         </h2>
-        <p className="stat-card-desc">
-          Hvor godt likte klubben bøkene hver av oss valgte?
-        </p>
       </header>
-      <p className="stat-method">
-        Snittet av bokgjennomsnittene for bøkene personen har valgt. Hver vurderte bok
-        teller likt, uansett antall terningkast. Bokas snitt beregnes fra alle medlemmenes
-        gyldige terningkast (1–6). 0, manglende og ugyldige terningkast utelates. Bøker
-        uten gyldige terningkast tas ikke med i gjennomsnittet.
-      </p>
       {rows.length ? (
         <ol className="chooser-ratings-list">
           {rows.map((row) => (

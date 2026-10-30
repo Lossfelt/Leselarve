@@ -31,9 +31,6 @@ export default function AuthorStatistics({ books }: { books: Book[] }) {
           <h2 className="stat-card-title" id={`${selectId}-heading`}>
             Kjønnsfordeling blant forfatterne
           </h2>
-          <p className="stat-card-desc">
-            Hvem har vi valgt å lese? Se hele klubben eller bøkene valgt av ett medlem.
-          </p>
         </div>
         <div className="stat-filter">
           <label htmlFor={selectId}>Bøker valgt av</label>
