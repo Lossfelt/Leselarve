@@ -1,417 +1,48 @@
 {
-  "Jon Fosse": {
-    "gender": "male",
-    "source": {
-      "url": "https://thebookerprizes.com/the-booker-library/authors/jon-fosse",
-      "title": "Jon Fosse | The Booker Prizes"
-    },
-    "evidence": "Award organisation’s author profile and interview introduction use his for Fosse.",
-    "checkedAt": "2026-10-29"
-  },
-  "Gine Cornelia Pedersen": {
-    "gender": "female",
-    "source": {
-      "url": "https://www.nordiskbooks.com/gine-cornelia-pedersen",
-      "title": "Gine Cornelia Pedersen — nordisk books"
-    },
-    "evidence": "Her English-language publisher’s author profile uses she and her, identifying the author of Zero.",
-    "checkedAt": "2026-10-29"
-  },
-  "George Orwell": {
-    "gender": "male",
-    "source": {
-      "url": "https://www.orwellfoundation.com/the-orwell-foundation/about/about-george-orwell/",
-      "title": "About George Orwell | The Orwell Foundation"
-    },
-    "evidence": "Foundation biography uses he and his for Orwell.",
-    "checkedAt": "2026-10-29"
-  },
-  "Édouard Louis": {
-    "gender": "male",
-    "source": {
-      "url": "https://www.hachette.fr/auteur/edouard-louis/",
-      "title": "Edouard Louis | Hachette.fr"
-    },
-    "evidence": "Publisher biography uses the French masculine pronoun il.",
-    "checkedAt": "2026-10-29"
-  },
-  "Hiromi Kawakami": {
-    "gender": "female",
-    "source": {
-      "url": "https://www.counterpointpress.com/authors/hiromi-kawakami/",
-      "title": "Hiromi Kawakami | Counterpoint Press"
-    },
-    "evidence": "Publisher author profile uses she and her and lists Strange Weather in Tokyo.",
-    "checkedAt": "2026-10-29"
-  },
-  "Rick Moody": {
-    "gender": "male",
-    "source": {
-      "url": "https://www.hachettebookgroup.com/contributor/rick-moody/",
-      "title": "Rick Moody | Hachette Book Group"
-    },
-    "evidence": "Publisher biography uses he and his and lists The Ice Storm.",
-    "checkedAt": "2026-10-29"
-  },
-  "Siri Pettersen": {
-    "gender": "female",
-    "source": {
-      "url": "https://www.gyldendal.no/forfattere/siri-pettersen",
-      "title": "Siri Pettersen – forfatter | Gyldendal"
-    },
-    "evidence": "Publisher author biography repeatedly uses hun and hennes.",
-    "checkedAt": "2026-10-29"
-  },
-  "Elena Ferrante": {
-    "gender": "female",
-    "source": {
-      "url": "https://elenaferrante.com/",
-      "title": "Elena Ferrante | Author of the Neapolitan Novels"
-    },
-    "evidence": "Official author website’s About biography uses she.",
-    "checkedAt": "2026-10-29",
-    "note": "Pseudonym. Kategorien følger den offentlige forfatteridentiteten slik den presenteres på forfatterens nettsted, ikke den ukjente private identiteten."
-  },
-  "M.R. Carey": {
-    "gender": "male",
-    "source": {
-      "url": "https://www.hachette.co.uk/contributor/m-r-carey-2/",
-      "title": "M. R. Carey | Hachette UK"
-    },
-    "evidence": "Publisher biography uses he and his, explicitly links M. R. Carey with Mike Carey, and includes Fellside.",
-    "checkedAt": "2026-10-29"
-  },
-  "Louis-Ferdinand Céline": {
-    "gender": "male",
-    "source": {
-      "url": "https://www.ndbooks.com/author/louis-ferdinand-celine/",
-      "title": "Louis-Ferdinand Céline | New Directions Publishing"
-    },
-    "evidence": "Publisher biography uses he and his and names Journey to the End of the Night.",
-    "checkedAt": "2026-10-29"
-  },
-  "Tomas Espedal": {
-    "gender": "male",
-    "source": {
-      "url": "https://www.gyldendal.no/forfattere/tomas-espedal",
-      "title": "Tomas Espedal – forfatter | Gyldendal"
-    },
-    "evidence": "Publisher author biography uses han and identifies Imot naturen.",
-    "checkedAt": "2026-10-29"
-  },
-  "Truman Capote": {
-    "gender": "male",
-    "source": {
-      "url": "https://www.penguinrandomhouse.com/authors/4231/truman-capote/",
-      "title": "Truman Capote | Penguin Random House"
-    },
-    "evidence": "Publisher biography uses he and his and lists Breakfast at Tiffany’s.",
-    "checkedAt": "2026-10-29"
-  },
-  "Vigdis Hjorth": {
-    "gender": "female",
-    "source": {
-      "url": "https://www.cappelendamm.no/forfatter/vigdis-hjorth-878",
-      "title": "Vigdis Hjorth | Cappelen Damm"
-    },
-    "evidence": "Publisher author biography uses hun and hennes, with Et norsk hus in the bibliography.",
-    "checkedAt": "2026-10-29"
-  },
-  "Samanta Schweblin": {
-    "gender": "female",
-    "source": {
-      "url": "https://www.penguinrandomhouse.com/authors/2128471/samanta-schweblin/",
-      "title": "Samanta Schweblin | Penguin Random House"
-    },
-    "evidence": "Publisher author biography uses she and her in the paragraph about Schweblin and Fever Dream (not the separate translator paragraph).",
-    "checkedAt": "2026-10-29"
-  },
-  "Siri Hustvedt": {
-    "gender": "female",
-    "source": {
-      "url": "https://sirihustvedt.net/life/biography/",
-      "title": "Biography | Siri Hustvedt | Writer"
-    },
-    "evidence": "Author’s own biography repeatedly uses she and her and describes herself among four girls in her family.",
-    "checkedAt": "2026-10-29"
-  },
-  "Nina Lykke": {
-    "gender": "female",
-    "source": {
-      "url": "https://osloliteraryagency.no/author/nina-lykke/",
-      "title": "Nina Lykke | Oslo Literary Agency"
-    },
-    "evidence": "Author’s literary agency uses she and her; identifies Disintegration / Oppløsningstendenser, avoiding confusion with the gender-studies scholar of the same name.",
-    "checkedAt": "2026-10-29"
-  },
-  "Jane Austen": {
-    "gender": "female",
-    "source": {
-      "url": "https://janeaustensociety.org.uk/jane-austen/biography/",
-      "title": "Jane Austen: A brief biography — The Jane Austen Society UK"
-    },
-    "evidence": "Biography describes Austen as a daughter and uses she/her.",
-    "checkedAt": "2026-10-29"
-  },
-  "David Foster Wallace": {
-    "gender": "male",
-    "source": {
-      "url": "https://www.penguinrandomhouse.com/authors/231447/david-foster-wallace/",
-      "title": "David Foster Wallace — Penguin Random House"
-    },
-    "evidence": "Publisher biography uses he when describing Wallace's authorship.",
-    "checkedAt": "2026-10-29"
-  },
-  "Emily St. John Mandel": {
-    "gender": "female",
-    "source": {
-      "url": "https://www.penguinrandomhouse.com/authors/222154/emily-st-john-mandel/",
-      "title": "Emily St. John Mandel — Penguin Random House"
-    },
-    "evidence": "Publisher biography uses she/her about the author.",
-    "checkedAt": "2026-10-29"
-  },
-  "Jenny Erpenbeck": {
-    "gender": "female",
-    "source": {
-      "url": "https://www.kiwi-verlag.de/autor/jenny-erpenbeck-4000348",
-      "title": "Jenny Erpenbeck — Kiepenheuer & Witsch"
-    },
-    "evidence": "Publisher calls Erpenbeck Autorin (female author) and uses sie.",
-    "checkedAt": "2026-10-29"
-  },
-  "Kazuo Ishiguro": {
-    "gender": "male",
-    "source": {
-      "url": "https://achievement.org/achiever/kazuo-ishiguro/",
-      "title": "Sir Kazuo Ishiguro — Academy of Achievement"
-    },
-    "evidence": "Award institution's biography and interview introduction use he/his for Ishiguro.",
-    "checkedAt": "2026-10-29"
-  },
-  "Erich Maria Remarque": {
-    "gender": "male",
-    "source": {
-      "url": "https://www.penguinrandomhouse.com/authors/52511/erich-maria-remarque/",
-      "title": "Erich Maria Remarque — Penguin Random House"
-    },
-    "evidence": "Publisher biography uses he/his about Remarque.",
-    "checkedAt": "2026-10-29"
-  },
-  "Olaug Nilssen": {
-    "gender": "female",
-    "source": {
-      "url": "https://samlaget.no/collections/olaug-nilssen",
-      "title": "Olaug Nilssen — Samlaget"
-    },
-    "evidence": "Publisher biography uses ho and describes Nilssen as a mother.",
-    "checkedAt": "2026-10-29"
-  },
-  "Patrick Ness": {
-    "gender": "male",
-    "source": {
-      "url": "https://www.walker.co.uk/author/patrick-ness/",
-      "title": "Patrick Ness — Walker Books"
-    },
-    "evidence": "Publisher biography uses he/his about Ness.",
-    "checkedAt": "2026-10-29"
-  },
-  "Naomi Alderman": {
-    "gender": "female",
-    "source": {
-      "url": "https://naomialderman.com/about/",
-      "title": "About — Naomi Alderman"
-    },
-    "evidence": "Author's own website biography uses she/her.",
-    "checkedAt": "2026-10-29"
-  },
-  "Virginie Despentes": {
-    "gender": "female",
-    "source": {
-      "url": "https://www.hachette.co.uk/contributor/virginie-despentes/",
-      "title": "Virginie Despentes — Hachette UK"
-    },
-    "evidence": "Publisher biography uses she/her about Despentes.",
-    "checkedAt": "2026-10-29"
-  },
-  "Ursula K. Le Guin": {
-    "gender": "female",
-    "source": {
-      "url": "https://www.ursulakleguin.com/biography",
-      "title": "About Ursula K. Le Guin — official website"
-    },
-    "evidence": "Official biography uses she/her about Le Guin.",
-    "checkedAt": "2026-10-29"
-  },
-  "Jón Kalman Stefánsson": {
-    "gender": "male",
-    "source": {
-      "url": "https://islit.is/en/hofundar/jon-kalman-stefansson/",
-      "title": "Jón Kalman Stefánsson — Icelandic Literature Center"
-    },
-    "evidence": "Literature center's author profile uses he/his about Stefánsson.",
-    "checkedAt": "2026-10-29"
-  },
-  "Kyrre Andreassen": {
-    "gender": "male",
-    "source": {
-      "url": "https://www.gyldendal.no/forfattere/kyrre-andreassen",
-      "title": "Kyrre Andreassen — Gyldendal"
-    },
-    "evidence": "Publisher biography uses han about Andreassen.",
-    "checkedAt": "2026-10-29"
-  },
-  "Max Porter": {
-    "gender": "male",
-    "source": {
-      "url": "https://www.penguinrandomhouse.com/authors/2111403/max-porter/",
-      "title": "Max Porter — Penguin Random House"
-    },
-    "evidence": "Publisher biography uses he about Porter.",
-    "checkedAt": "2026-10-29"
-  },
-  "Yukio Mishima": {
-    "gender": "male",
-    "source": {
-      "url": "https://www.penguinrandomhouse.com/authors/20849/yukio-mishima/",
-      "title": "Yukio Mishima — Penguin Random House"
-    },
-    "evidence": "Publisher biography uses he/his about Mishima.",
-    "checkedAt": "2026-10-29"
-  },
-  "Philip Roth": {
-    "gender": "male",
-    "source": {
-      "url": "https://www.penguinrandomhouse.com/authors/26289/philip-roth/",
-      "title": "Philip Roth — Penguin Random House"
-    },
-    "evidence": "Publisher biography uses he/his about Roth.",
-    "checkedAt": "2026-10-29"
-  },
-  "Chinua Achebe": {
-    "gender": "male",
-    "source": {
-      "url": "https://www.penguinrandomhouse.com/authors/75/chinua-achebe/",
-      "title": "Chinua Achebe | Penguin Random House"
-    },
-    "evidence": "Forlagsbiografien omtaler forfatteren med «he».",
-    "checkedAt": "2026-10-29"
-  },
-  "Per Olov Enquist": {
-    "gender": "male",
-    "source": {
-      "url": "https://www.norstedts.se/115769-per-olov-enquist",
-      "title": "Per Olov Enquist | Norstedts"
-    },
-    "evidence": "Forlagsbiografien omtaler forfatteren med «han».",
-    "checkedAt": "2026-10-29"
-  },
-  "Toni Morrison": {
-    "gender": "female",
-    "source": {
-      "url": "https://dof.princeton.edu/people/toni-morrison",
-      "title": "Toni Morrison | Princeton University"
-    },
-    "evidence": "Universitetets egen biografi omtaler forfatteren med «she».",
-    "checkedAt": "2026-10-29"
-  },
-  "Virginia Woolf": {
-    "gender": "female",
-    "source": {
-      "url": "https://www.penguinrandomhouse.com/authors/33723/virginia-woolf/",
-      "title": "Virginia Woolf | Penguin Random House"
-    },
-    "evidence": "Forlagsbiografien omtaler forfatteren med «she».",
-    "checkedAt": "2026-10-29"
-  },
-  "Alfred Bester": {
-    "gender": "male",
-    "source": {
-      "url": "https://www.hachette.co.uk/contributor/alfred-bester/",
-      "title": "Alfred Bester | Hachette UK"
-    },
-    "evidence": "Forlagsbiografien omtaler forfatteren med «he».",
-    "checkedAt": "2026-10-29"
-  },
-  "Pamela Erens": {
-    "gender": "female",
-    "source": {
-      "url": "https://www.pamelaerens.com/bio",
-      "title": "Bio | Pamela Erens"
-    },
-    "evidence": "Forfatterens egen biografiside omtaler henne med «her».",
-    "checkedAt": "2026-10-29"
-  },
-  "Lois Lowry": {
-    "gender": "female",
-    "source": {
-      "url": "https://www.penguinrandomhouse.com/authors/18179/lois-lowry/",
-      "title": "Lois Lowry | Penguin Random House"
-    },
-    "evidence": "Forlagsbiografien omtaler forfatteren med «she».",
-    "checkedAt": "2026-10-29"
-  },
-  "Becky Chambers": {
-    "gender": "female",
-    "source": {
-      "url": "https://www.hachette.co.uk/contributor/becky-chambers/",
-      "title": "Becky Chambers | Hachette UK"
-    },
-    "evidence": "Forlagsbiografien omtaler forfatteren med «she».",
-    "checkedAt": "2026-10-29"
-  },
-  "Jens M. Johansson": {
-    "gender": "male",
-    "source": {
-      "url": "https://tiden.no/forfattere/jens-m-johansson",
-      "title": "Jens M. Johansson | Tiden"
-    },
-    "evidence": "Forlagsbiografien omtaler forfatteren med «han».",
-    "checkedAt": "2026-10-29"
-  },
-  "Jean-paul Sartre": {
-    "gender": "male",
-    "source": {
-      "url": "https://www.penguinrandomhouse.com/authors/26940/jean-paul-sartre/",
-      "title": "Jean-Paul Sartre | Penguin Random House"
-    },
-    "evidence": "Forlagsbiografien omtaler forfatteren med «he».",
-    "checkedAt": "2026-10-29"
-  },
-  "Maren Uthaug": {
-    "gender": "female",
-    "source": {
-      "url": "https://www.gyldendal.dk/forfattere/maren-uthaug-f111334",
-      "title": "Maren Uthaug | Gyldendal Danmark"
-    },
-    "evidence": "Forlagsbiografien omtaler forfatteren med «hun».",
-    "checkedAt": "2026-10-29"
-  },
-  "John Green": {
-    "gender": "male",
-    "source": {
-      "url": "https://www.johngreenbooks.com/bio",
-      "title": "Bio | John Green"
-    },
-    "evidence": "Forfatterens egen biografiside omtaler ham med «he».",
-    "checkedAt": "2026-10-29"
-  },
-  "Kjersti Anfinnsen": {
-    "gender": "female",
-    "source": {
-      "url": "https://www.kolonforlag.no/authors/details/58",
-      "title": "Kjersti Anfinnsen | Kolon forlag"
-    },
-    "evidence": "Forlagsbiografien omtaler forfatteren med «hun».",
-    "checkedAt": "2026-10-29"
-  },
-  "Cecilie Enger": {
-    "gender": "female",
-    "source": {
-      "url": "https://www.gyldendal.no/forfattere/cecilie-enger",
-      "title": "Cecilie Enger | Gyldendal"
-    },
-    "evidence": "Forlagsbiografien omtaler forfatteren med «hun».",
-    "checkedAt": "2026-10-29"
-  }
+  "Jon Fosse": "male",
+  "Gine Cornelia Pedersen": "female",
+  "George Orwell": "male",
+  "Édouard Louis": "male",
+  "Hiromi Kawakami": "female",
+  "Rick Moody": "male",
+  "Siri Pettersen": "female",
+  "Elena Ferrante": "female",
+  "M.R. Carey": "male",
+  "Louis-Ferdinand Céline": "male",
+  "Tomas Espedal": "male",
+  "Truman Capote": "male",
+  "Vigdis Hjorth": "female",
+  "Samanta Schweblin": "female",
+  "Siri Hustvedt": "female",
+  "Nina Lykke": "female",
+  "Jane Austen": "female",
+  "David Foster Wallace": "male",
+  "Emily St. John Mandel": "female",
+  "Jenny Erpenbeck": "female",
+  "Kazuo Ishiguro": "male",
+  "Erich Maria Remarque": "male",
+  "Olaug Nilssen": "female",
+  "Patrick Ness": "male",
+  "Naomi Alderman": "female",
+  "Virginie Despentes": "female",
+  "Ursula K. Le Guin": "female",
+  "Jón Kalman Stefánsson": "male",
+  "Kyrre Andreassen": "male",
+  "Max Porter": "male",
+  "Yukio Mishima": "male",
+  "Philip Roth": "male",
+  "Chinua Achebe": "male",
+  "Per Olov Enquist": "male",
+  "Toni Morrison": "female",
+  "Virginia Woolf": "female",
+  "Alfred Bester": "male",
+  "Pamela Erens": "female",
+  "Lois Lowry": "female",
+  "Becky Chambers": "female",
+  "Jens M. Johansson": "male",
+  "Jean-paul Sartre": "male",
+  "Maren Uthaug": "female",
+  "John Green": "male",
+  "Kjersti Anfinnsen": "female",
+  "Cecilie Enger": "female"
 }

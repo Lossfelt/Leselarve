@@ -3,7 +3,6 @@ import { readFileSync } from "node:fs";
 import test from "node:test";
 import {
   authorDistribution,
-  bookAuthors,
   bookRating,
   formatRating,
   isValidRating,
@@ -14,9 +13,7 @@ import {
 const books = JSON.parse(
   readFileSync(new URL("./fixtures/catalog-2026-10-29.json", import.meta.url))
 );
-const profiles = JSON.parse(
-  readFileSync(new URL("../src/AUTHORS.json", import.meta.url))
-);
+const genders = JSON.parse(readFileSync(new URL("../src/AUTHORS.json", import.meta.url)));
 const makeBook = (overrides = {}) => ({
   ...books[0],
   author: "Known woman",
@@ -26,20 +23,11 @@ const makeBook = (overrides = {}) => ({
 });
 const casts = (...values) =>
   values.map((terningkast, index) => ({ medlem: `Voter ${index}`, terningkast }));
-const testProfiles = {
-  "Known woman": {
-    gender: "female",
-    source: { url: "https://example.org/woman", title: "Biography" }
-  },
-  "Known man": {
-    gender: "male",
-    source: { url: "https://example.org/man", title: "Biography" }
-  },
-  "Nonbinary author": {
-    gender: "nonbinary",
-    source: { url: "https://example.org/nonbinary", title: "Biography" }
-  },
-  Unsourced: { gender: "male" }
+const testGenders = {
+  "Known woman": "female",
+  "Known man": "male",
+  "Nonbinary author": "nonbinary",
+  "Invalid category": "invalid"
 };
 
 test("ratings include only integer dice rolls from 1 to 6", () => {
@@ -96,47 +84,44 @@ test("unrated books/members remain visible without fabricated zero averages or r
   assert.equal(formatRating(191 / 44), "4,34");
 });
 
-test("author contributions count once per author per book, repeat across books, preserve all categories", () => {
+test("author distribution counts each book once, including repeated authors and all categories", () => {
   const input = [
     makeBook(),
     makeBook(),
-    makeBook({
-      authors: ["Known woman", "Known man", "Known man", " Nonbinary author "]
-    }),
+    makeBook({ author: "Known man" }),
+    makeBook({ author: " Nonbinary author " }),
     makeBook({ author: "New author" }),
-    makeBook({ author: "Unsourced" })
+    makeBook({ author: "Invalid category" })
   ];
-  const result = authorDistribution(input, testProfiles);
-  assert.deepEqual(result.counts, { female: 3, male: 1, nonbinary: 1, unknown: 2 });
-  assert.equal(result.total, 7);
-  assert.equal(result.bookCount, 5);
+  const result = authorDistribution(input, testGenders);
+  assert.deepEqual(result.counts, { female: 2, male: 1, nonbinary: 1, unknown: 2 });
+  assert.equal(result.total, input.length);
+  assert.equal(
+    Object.values(result.counts).reduce((sum, count) => sum + count, 0),
+    input.length
+  );
 });
 
 test("no names are guessed, including punctuation, missing names and object prototype keys", () => {
   for (const author of ["Name & Name", "Family, Given", "toString", "__proto__", ""]) {
     assert.equal(
-      authorDistribution([makeBook({ author })], testProfiles).counts.unknown,
+      authorDistribution([makeBook({ author })], testGenders).counts.unknown,
       1
     );
   }
-  assert.deepEqual(bookAuthors(makeBook({ authors: [] })), ["Known woman"]);
-  assert.deepEqual(bookAuthors(makeBook({ authors: [" ", ""] })), ["Ukjent forfatter"]);
-  assert.equal(authorDistribution([], testProfiles).total, 0);
+  assert.equal(authorDistribution([], testGenders).total, 0);
 });
 
-test("every current author classification has a source and audit evidence", () => {
-  for (const [name, profile] of Object.entries(profiles)) {
-    assert.ok(profile, `Missing metadata: ${name}`);
-    assert.ok(["female", "male", "nonbinary", "unknown"].includes(profile.gender));
-    assert.match(profile.source.url, /^https:\/\//);
-    assert.ok(profile.source.title && profile.evidence && profile.checkedAt);
+test("author data contains only names and supported gender values", () => {
+  for (const [name, gender] of Object.entries(genders)) {
+    assert.ok(name.trim());
+    assert.ok(["female", "male", "nonbinary", "unknown"].includes(gender));
   }
-  assert.match(profiles["Elena Ferrante"].note, /offentlige forfatteridentiteten/);
 });
 
 test("actual catalog totals and each member drill-down reconcile", () => {
-  const overall = authorDistribution(books, profiles);
-  assert.equal(overall.bookCount, 46);
+  const overall = authorDistribution(books, genders);
+  assert.equal(overall.total, 46);
   assert.deepEqual(overall.counts, { female: 23, male: 23, nonbinary: 0, unknown: 0 });
   const expected = {
     Heidi: [5, 3],
@@ -150,7 +135,7 @@ test("actual catalog totals and each member drill-down reconcile", () => {
   for (const [name, [female, male]] of Object.entries(expected)) {
     const result = authorDistribution(
       books.filter((book) => book.chosenBy === name),
-      profiles
+      genders
     );
     assert.deepEqual(result.counts, { female, male, nonbinary: 0, unknown: 0 });
     total += result.total;

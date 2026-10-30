@@ -1,14 +1,7 @@
 import type { Book } from "./types.ts";
 
 export type AuthorGender = "female" | "male" | "nonbinary" | "unknown";
-export type AuthorProfile = {
-  gender: AuthorGender;
-  source?: { url: string; title: string };
-  evidence?: string;
-  checkedAt?: string;
-  note?: string;
-};
-export type AuthorProfiles = Record<string, AuthorProfile>;
+export type AuthorGenders = Record<string, AuthorGender>;
 export const GENDER_GROUPS: { key: AuthorGender; label: string }[] = [
   { key: "female", label: "Kvinner" },
   { key: "male", label: "Menn" },
@@ -16,38 +9,20 @@ export const GENDER_GROUPS: { key: AuthorGender; label: string }[] = [
   { key: "unknown", label: "Uavklart" }
 ];
 
-// A missing or unsourced classification must never become a name-based guess.
-export function authorProfile(name: string, profiles: AuthorProfiles): AuthorProfile {
-  const profile = Object.hasOwn(profiles, name) ? profiles[name] : undefined;
-  if (!profile?.source || !GENDER_GROUPS.some(({ key }) => key === profile.gender)) {
-    return { ...profile, gender: "unknown" };
-  }
-  return profile;
-}
-
-export function bookAuthors(book: Book): string[] {
-  // Multiple authors must be entered explicitly; do not split names on punctuation.
-  const names = (book.authors?.length ? book.authors : [book.author])
-    .map((name) => name.trim())
-    .filter(Boolean);
-  return [...new Set(names.length ? names : ["Ukjent forfatter"])];
-}
-
-export function authorDistribution(books: Book[], profiles: AuthorProfiles) {
+export function authorDistribution(books: Book[], genders: AuthorGenders) {
   const counts: Record<AuthorGender, number> = {
     female: 0,
     male: 0,
     nonbinary: 0,
     unknown: 0
   };
-  const entries = books.flatMap((book) =>
-    bookAuthors(book).map((name) => {
-      const profile = authorProfile(name, profiles);
-      counts[profile.gender] += 1;
-      return { book, name, profile };
-    })
-  );
-  return { counts, total: entries.length, bookCount: books.length, entries };
+  for (const book of books) {
+    const name = book.author.trim();
+    const gender = Object.hasOwn(genders, name) ? genders[name] : "unknown";
+    const category = GENDER_GROUPS.some(({ key }) => key === gender) ? gender : "unknown";
+    counts[category] += 1;
+  }
+  return { counts, total: books.length };
 }
 
 export function isValidRating(value: number): boolean {

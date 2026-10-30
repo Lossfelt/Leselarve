@@ -1,9 +1,9 @@
 import { useId, useMemo, useState } from "react";
 import authorsData from "../AUTHORS.json";
-import { authorDistribution, GENDER_GROUPS, type AuthorProfiles } from "../statistics.ts";
+import { authorDistribution, GENDER_GROUPS, type AuthorGenders } from "../statistics.ts";
 import type { Book } from "../types.ts";
 
-const profiles = authorsData as AuthorProfiles;
+const genders = authorsData as AuthorGenders;
 
 export default function AuthorStatistics({ books }: { books: Book[] }) {
   const [member, setMember] = useState("");
@@ -19,10 +19,7 @@ export default function AuthorStatistics({ books }: { books: Book[] }) {
   const selectedBooks = selectedMember
     ? books.filter((book) => book.chosenBy === selectedMember)
     : books;
-  const { counts, total, bookCount, entries } = authorDistribution(
-    selectedBooks,
-    profiles
-  );
+  const { counts, total } = authorDistribution(selectedBooks, genders);
 
   return (
     <section
@@ -56,7 +53,7 @@ export default function AuthorStatistics({ books }: { books: Book[] }) {
       </header>
       <div aria-live="polite" aria-atomic="true">
         <p className="stat-scope">
-          {selectedMember || "Hele klubben"} · {bookCount} bøker · {total} forfatterbidrag
+          {selectedMember || "Hele klubben"} · {total} bøker
         </p>
         <dl className="gender-counts">
           {GENDER_GROUPS.map(({ key, label }) => (
@@ -95,48 +92,9 @@ export default function AuthorStatistics({ books }: { books: Book[] }) {
         )}
       </div>
       <p className="stat-method">
-        Én telling per forfatter per valgt bok, ikke unike personer. Samme forfatter i to
-        bøker teller to ganger. Ved flere forfattere telles hver av dem. Også bøker uten
-        terningkast er med.
+        Én telling per valgt bok, ikke unike personer. Samme forfatter i to bøker teller
+        to ganger. Også bøker uten terningkast er med.
       </p>
-      <details className="stat-details">
-        <summary>Se bøker, forfattere og kilder ({entries.length})</summary>
-        <p className="stat-method">
-          Kategoriene bygger på offentlig omtale i forfatter-, forlags- og
-          institusjonsbiografier, kontrollert 29. oktober 2026, ikke på navn eller bilder.
-          Omtale og pronomen er ikke en uttømmende beskrivelse av kjønnsidentitet.
-          Manglende eller uavklarte opplysninger telles som «Uavklart», aldri automatisk
-          som kvinne eller mann. Ferrante telles etter den offentlige
-          forfatteridentiteten, ikke den ukjente private identiteten.
-        </p>
-        <ul className="author-source-list">
-          {entries.map(({ book, name, profile }) => (
-            <li key={`${book.numberInLine}-${name}`}>
-              <div>
-                <strong>{book.title}</strong>
-                <span className="stat-source-book">Valgt av {book.chosenBy}</span>
-              </div>
-              <div>
-                {name}{" "}
-                <span className="stat-source-category">
-                  · {GENDER_GROUPS.find(({ key }) => key === profile.gender)?.label}
-                </span>
-                {profile.source ? (
-                  <a href={profile.source.url} target="_blank" rel="noreferrer">
-                    Kilde: {profile.source.title}{" "}
-                    <span className="sr-only">(åpnes i ny fane)</span>
-                  </a>
-                ) : (
-                  <span className="stat-source-book">
-                    Ingen verifisert kilde registrert
-                  </span>
-                )}
-                {profile.note && <span className="stat-source-book">{profile.note}</span>}
-              </div>
-            </li>
-          ))}
-        </ul>
-      </details>
     </section>
   );
 }

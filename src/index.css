@@ -670,9 +670,7 @@ button {
   padding: 9px 32px 9px 10px;
   min-width: 160px;
 }
-.stat-filter select:focus-visible,
-.stat-details summary:focus-visible,
-.author-source-list a:focus-visible {
+.stat-filter select:focus-visible {
   outline: 3px solid #6b7a3a;
   outline-offset: 3px;
 }
@@ -746,46 +744,6 @@ button {
   line-height: 1.6;
   max-width: 100ch;
 }
-.stat-details {
-  border-top: 1px solid var(--border);
-  padding-top: 14px;
-  margin-top: 16px;
-  font-size: 0.85rem;
-}
-.stat-details summary {
-  cursor: pointer;
-  color: var(--text);
-  font-weight: 600;
-  padding: 4px 0;
-}
-.author-source-list {
-  list-style: none;
-  padding: 0;
-  margin: 12px 0 0;
-}
-.author-source-list li {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 12px 24px;
-  padding: 12px 0;
-  border-top: 1px solid var(--border);
-  overflow-wrap: anywhere;
-}
-.author-source-list a {
-  display: block;
-  margin-top: 4px;
-  color: #485a25;
-  text-underline-offset: 3px;
-}
-.stat-source-book {
-  display: block;
-  margin-top: 3px;
-  color: var(--text-muted);
-  font-size: 0.8rem;
-}
-.stat-source-category {
-  color: var(--text-muted);
-}
 .chooser-ratings-list {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -829,26 +787,11 @@ button {
   font-size: 0.8rem;
   margin: 7px 0 0;
 }
-.sr-only {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  white-space: nowrap;
-  border: 0;
-}
 @media (max-width: 720px) {
   .gender-counts {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
   .chooser-ratings-list {
     grid-template-columns: 1fr;
-  }
-  .author-source-list li {
-    grid-template-columns: 1fr;
-    gap: 5px;
   }
 }

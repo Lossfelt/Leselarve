@@ -6,8 +6,6 @@ export type Terningkast = {
 export type Book = {
   title: string;
   author: string;
-  /** Explicit author names for co-authored books; author remains the display credit. */
-  authors?: string[];
   authorNationality: string;
   published: number;
   chosenBy: string;
